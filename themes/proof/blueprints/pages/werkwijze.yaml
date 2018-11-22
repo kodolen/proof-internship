@@ -34,6 +34,12 @@ form:
                                 .link:
                                     type: text
                                     label: Link to website
+                        header.summary-title:
+                            type: text
+                            label: Summary title
+                        header.summary:
+                            type: text
+                            label: Summary
                         header.programming_logos:
                             name: fields
                             type: list
