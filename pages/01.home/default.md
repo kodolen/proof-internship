@@ -1,6 +1,15 @@
 ---
 title: Home
 media_order: lennart-zw.png
+test_fields:
+    -
+        title: 'Test 1 title'
+        caption: 'test 1 caption'
+        textarea: 'test 1 textarea'
+    -
+        title: 'Test 2 title'
+        caption: 'test 2 caption'
+        textarea: 'test 2 textarea'
 template: pages/home
 ---
 
