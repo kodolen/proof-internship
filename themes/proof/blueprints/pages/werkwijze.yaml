@@ -34,7 +34,7 @@ form:
                                 .link:
                                     type: text
                                     label: Link to website
-                        header.summary-title:
+                        header.summary_title:
                             type: text
                             label: Summary title
                         header.summary:
