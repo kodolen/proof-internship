@@ -12,24 +12,10 @@ form:
             fields:
                 content:
                     fields:
-                        header.quote: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
+                        header.quote:
                             type: text
                             label: Additional Quote
-
-                        header.text_field_title: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
-                            type: text
-                            label: Additional Title
-                        header.text_field_caption: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
-                                type: text
-                                label: Additional Caption
-                        header.another_markdown_area:  #see comment above, created an additional markdown enabled text editor, useful for multiple text blocks. This is more advanced you must use the |markdown filter to make it appear as markdown in the template file ex: {{page.header.another_markdown_area |markdown}}
-                            type: markdown
-                            label: Text area
-                            showPreview: true
-                            validate:
-                                type: textarea
-
-                        header.test_fields:
+                        header.custom_text_fields:
                             name: fields
                             type: list
                             style: vertical
@@ -44,31 +30,3 @@ form:
                                 .textarea:
                                     type: textarea
                                     label: textarea
-
-
-
-#                        header.text_field_title: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
-#                            type: text
-#                            label: Additional Title
-#                        header.text_field_caption: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
-#                            type: text
-#                            label: Additional Caption
-#                        header.another_markdown_area:  #see comment above, created an additional markdown enabled text editor, useful for multiple text blocks. This is more advanced you must use the |markdown filter to make it appear as markdown in the template file ex: {{page.header.another_markdown_area |markdown}}                                type: markdown
-#                            type: markdown
-#                            label: Text fiel
-#                            showPreview: true
-#                            validate:
-#                                type: textarea
-#
-#                        header.text_field_title: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
-#                            type: text
-#                            label: Additional Title
-#                        header.text_field_caption: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
-#                            type: text
-#                            label: Additional Caption
-#                        header.another_markdown_area:  #see comment above, created an additional markdown enabled text editor, useful for multiple text blocks. This is more advanced you must use the |markdown filter to make it appear as markdown in the template file ex: {{page.header.another_markdown_area |markdown}}                                type: markdown
-#                            type: markdown
-#                            label: Text field
-#                            showPreview: true
-#                            validate:
-#                                type: textarea

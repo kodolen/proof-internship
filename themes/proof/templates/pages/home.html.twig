@@ -23,14 +23,14 @@
         </div>
     </div>
 
-    {% for test in page.header.test_fields %}
+    {% for text in page.header.custom_text_fields %}
 
         <div class="row">
             <div class="column medium-8 medium-offset-2">
 
-                <h1>{{ test.title }}</h1>
-                <h2>{{ test.caption }}</h2>
-                <p>{{ test.textarea }}</p>
+                <h1>{{ text.title }}</h1>
+                <h2>{{ text.caption }}</h2>
+                <p>{{ text.textarea }}</p>
 
             </div>
         </div>
