@@ -31,3 +31,7 @@ form:
                                     type: file
                                     label: Upload image
                                     destination: 'user/themes/proof/assets'
+                                .link:
+                                    type: text
+                                    label: Link to website
+                                

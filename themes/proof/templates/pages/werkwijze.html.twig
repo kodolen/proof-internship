@@ -13,20 +13,32 @@
         </div>
     </div>
 
-    {#{% for text in page.header.custom_text_fields %}#}
+    {% for text in page.header.custom_text_fields %}
 
-        {#<div class="row">#}
-            {#<div class="column medium-6 medium-offset-3">#}
-                {#<div class="content-block-text">#}
+        <div class="row">
+            <div class="column medium-6 medium-offset-3">
+                <div class="content-block-text">
+                    <div class="row">
+                        <div class="column medium-2">
 
-                    {#<h2>{{ text.title }}</h2>#}
-                    {#<span class="caption">{{ text.caption }}</span>#}
-                    {#<p>{{ text.textarea }}</p>#}
+                            <img src="{{(text.image|first).path}}" />
 
-                {#</div>#}
-            {#</div>#}
-        {#</div>#}
+                        </div>
+                        <div class="column medium-6">
 
-    {#{% endfor %}#}
+                            <h2>{{ text.title }}</h2>
+
+                            <span class="caption">{{ text.caption }}</span>
+
+                        </div>
+                    </div>
+
+                    <p>{{ text.textarea }}</p>
+
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
 
 {% endblock %}

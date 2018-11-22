@@ -3898,6 +3898,9 @@ a:hover {
 .content-block-text h2 {
   margin-bottom: -0.5rem;
 }
+.content-block-text img {
+  margin-top: 1.5rem;
+}
 
 .quote-block {
   background-color: #F7F7F7;
