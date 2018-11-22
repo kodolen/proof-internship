@@ -1,16 +1,25 @@
 .button {
 
-    @extend %light;
+    @extend %semi-bold;
 
     text-transform: uppercase;
     position: relative;
     padding: rem-calc(8 16);
-    letter-spacing: rem-calc(8);
+    letter-spacing: rem-calc(4);
 
     &.primary {
 
-        color: $blue;
+        color: $white;
+        background-color: $blue;
         border: rem-calc(2) solid $blue;
+
+        &:hover {
+
+            color: $blue;
+            background-color: $white;
+            border: rem-calc(2) solid $blue;
+
+        }
 
     }
 

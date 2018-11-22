@@ -1,13 +1,13 @@
 .footer {
 
     background-color: $dark-blue;
-    padding: rem-calc(16);
     margin-top: rem(80);
+    padding: rem-calc(16);
 
     .footer-content {
 
-        display: flex;
         align-items: center;
+        display: flex;
         justify-content: space-between;
 
         span {
@@ -18,9 +18,9 @@
 
         .linkedin {
 
-            background: $white;
-            height: 50px;
-            width: 50px;
+            @extend %bold;
+            color: $white;
+            font-size: rem-calc(24);
 
         }
 

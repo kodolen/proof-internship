@@ -102,6 +102,7 @@ h1 {
     @extend %semi-bold;
 
     font-size: rem-calc(40);
+    text-transform: uppercase;
 
     @include breakpoint(medium) {
 
