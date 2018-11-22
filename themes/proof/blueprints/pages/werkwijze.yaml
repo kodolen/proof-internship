@@ -34,4 +34,14 @@ form:
                                 .link:
                                     type: text
                                     label: Link to website
+                        header.programming.logos:
+                            name: fields
+                            type: list
+                            style: vertical
+                            label: fields
+                            fields:
+                                .logo:
+                                    type: file
+                                    label: Upload logo
+                                    destination: 'user/themes/proof/assets'
 
