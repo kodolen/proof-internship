@@ -3750,6 +3750,16 @@ a:hover {
   background-color: #FFFFFF;
   border: 0.125rem solid #4990E2;
 }
+.button.secondary {
+  color: #4990E2;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #4990E2;
+}
+.button.secondary:hover {
+  color: #FFFFFF;
+  background-color: #4990E2;
+  border: 0.125rem solid #4990E2;
+}
 
 .header {
   color: #FFFFFF;
@@ -3900,6 +3910,10 @@ a:hover {
 }
 .content-block-text img {
   margin-top: 1.5rem;
+}
+.content-block-text .button-wrapper {
+  float: right;
+  width: auto;
 }
 
 .quote-block {

@@ -23,4 +23,20 @@
 
     }
 
+    &.secondary {
+
+        color: $blue;
+        background-color: $white;
+        border: rem-calc(2) solid $blue;
+
+        &:hover {
+
+            color: $white;
+            background-color: $blue;
+            border: rem-calc(2) solid $blue;
+
+        }
+
+    }
+
 }
