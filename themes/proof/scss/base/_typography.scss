@@ -40,7 +40,6 @@
 
 }
 
-
 @font-face {
 
     font-family: 'SourceSansProLight';
@@ -106,7 +105,7 @@ h1 {
 
     @include breakpoint(medium) {
 
-        font-size: rem-calc(64);
+        font-size: rem-calc(52);
 
     }
 
@@ -116,12 +115,25 @@ h2 {
 
     @extend %semi-bold;
 
-    font-size: rem-calc(32);
-    margin: 0;
+    font-size: rem-calc(24);
 
     @include breakpoint(medium) {
 
-        font-size: rem-calc(58);
+        font-size: rem-calc(32);
+
+    }
+
+}
+
+h3 {
+
+    @extend %semi-bold;
+
+    font-size: rem-calc(24);
+
+    @include breakpoint(medium) {
+
+        font-size: rem-calc(40);
 
     }
 
@@ -136,7 +148,7 @@ p {
 
     @include breakpoint(medium) {
 
-        font-size: rem-calc(18);
+        font-size: rem-calc(16);
         line-height: rem-calc(40);
 
     }
@@ -145,12 +157,12 @@ p {
 
 .quote {
 
-    @extend %regular;
+    @extend %light;
 
     font-size: rem-calc(16);
     line-height: rem-calc(32);
 
-    @include breakpoint(medium){
+    @include breakpoint(medium) {
 
         font-size: rem-calc(32);
         line-height: rem-calc(60);
@@ -159,6 +171,22 @@ p {
 
 }
 
+.caption {
+
+    @extend %light;
+
+    font-size: rem-calc(14);
+    text-transform: uppercase;
+    color: $blue;
+
+    @include breakpoint(medium){
+
+        font-size: rem-calc(16);
+
+    }
+
+
+}
 
 a {
     color: #1F8CD6;

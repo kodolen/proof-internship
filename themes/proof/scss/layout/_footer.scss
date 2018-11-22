@@ -1,8 +1,30 @@
 .footer {
 
     background-color: $dark-blue;
-    height: rem-calc(80);
+    padding: rem-calc(16);
     margin-top: rem(80);
+
+    .footer-content {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+
+            color: $white;
+
+        }
+
+        .linkedin {
+
+            background: $white;
+            height: 50px;
+            width: 50px;
+
+        }
+
+    }
 
 }
 

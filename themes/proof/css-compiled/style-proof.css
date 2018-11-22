@@ -3649,15 +3649,11 @@ ol.list-upper-roman {
   font-weight: normal;
   font-style: normal;
 }
-.main-nav ul li.selected > a, h2, h1 {
+.main-nav ul li.selected > a, h3, h2, h1 {
   font-family: "SourceSansProSemibold";
 }
 
-.quote {
-  font-family: "SourceSansProRegular";
-}
-
-.header a, .button, p {
+.header a, .button, .caption, .quote, p {
   font-family: "SourceSansProLight";
 }
 
@@ -3670,17 +3666,25 @@ h1 {
 }
 @media print, screen and (min-width: 40em) {
   h1 {
-    font-size: 4rem;
+    font-size: 3.25rem;
   }
 }
 
 h2 {
-  font-size: 2rem;
-  margin: 0;
+  font-size: 1.5rem;
 }
 @media print, screen and (min-width: 40em) {
   h2 {
-    font-size: 3.625rem;
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+@media print, screen and (min-width: 40em) {
+  h3 {
+    font-size: 2.5rem;
   }
 }
 
@@ -3690,7 +3694,7 @@ p {
 }
 @media print, screen and (min-width: 40em) {
   p {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 2.5rem;
   }
 }
@@ -3703,6 +3707,17 @@ p {
   .quote {
     font-size: 2rem;
     line-height: 3.75rem;
+  }
+}
+
+.caption {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #4990E2;
+}
+@media print, screen and (min-width: 40em) {
+  .caption {
+    font-size: 1rem;
   }
 }
 
@@ -3817,9 +3832,22 @@ a:hover {
 }
 
 .footer {
-  background-color: #1B3A5E;
-  height: 5rem;
+  background-color: #2A5484;
+  padding: 1rem;
   margin-top: rem(80);
+}
+.footer .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .footer-content span {
+  color: #FFFFFF;
+}
+.footer .footer-content .linkedin {
+  background: #FFFFFF;
+  height: 50px;
+  width: 50px;
 }
 
 .home-visual {
@@ -3852,6 +3880,20 @@ a:hover {
   position: absolute;
   bottom: 0;
   opacity: 0.3;
+}
+
+.content-block-text {
+  margin: 6.25rem 0 6.25rem 0;
+}
+.content-block-text h2 {
+  margin-bottom: -0.5rem;
+}
+
+.quote-block {
+  background-color: #F7F7F7;
+  width: 100%;
+  text-align: center;
+  padding: 4.5rem 0 4.5rem 0;
 }
 
 .menu-toggle {
