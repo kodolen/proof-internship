@@ -1,2 +1,2 @@
 # proof-internship
-Intership website
+Internship website
