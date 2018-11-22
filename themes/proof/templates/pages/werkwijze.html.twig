@@ -54,8 +54,15 @@
                 {#TODO Add translations or via admin panel#}
                 <span class="caption">Gebruikte Programmeertalen:</span>
 
+                {% for logo in page.programming_logos %}
+
+                    <img src="{{ (logo.image|first).path }}" />
+
+                {% endfor %}
+
             </div>
         </div>
     </div>
+
 
 {% endblock %}
