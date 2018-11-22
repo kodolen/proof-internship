@@ -1,0 +1,174 @@
+.header {
+
+    color: $white;
+    overflow: hidden;
+    padding: rem-calc(10);
+    position: fixed;
+    top: 0;
+    transition: all 0.5s ease-out;
+    width: 100%;
+    z-index: 20;
+
+    .padding {
+
+        padding: 1rem 0;
+
+    }
+
+    a {
+
+        @extend %light;
+
+        color: #fff;
+        font-size: rem-calc(18);
+        letter-spacing: rem-calc(5);
+        text-transform: uppercase;
+
+    }
+
+    .logo {
+
+        @extend %sf-bold;
+
+        font-size: rem-calc(30);
+        text-transform: uppercase;
+
+    }
+
+}
+
+/* Menu Settings */
+
+.main-nav {
+
+    ul {
+
+        letter-spacing: -1em;
+        margin: rem-calc(0 100 0 0);
+        padding: 0;
+        text-align: right;
+
+        li {
+
+            display: inline-block;
+            letter-spacing: normal;
+            position: relative;
+
+            a {
+
+                color: #fff;
+                display: block;
+                line-height: 45px;
+                padding: 0 20px;
+                position: relative;
+                white-space: nowrap;
+
+            }
+
+            &.selected > a {
+
+                @extend %semi-bold;
+
+            }
+
+            ul {
+
+                background-color: red;
+                display: none;
+                min-width: 100%;
+                position: absolute;
+                text-align: left;
+                z-index: 999;
+
+                li {
+
+                    display: block;
+
+                }
+
+                ul {
+
+                    left: 100%;
+                    top: 0;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    > ul > li > a {
+
+        border-radius: 2px;
+
+    }
+
+    li:hover > ul {
+
+        display: block;
+
+    }
+
+    .has-children {
+
+        > a {
+
+            padding-right: 30px;
+
+            &:after {
+
+                content: '\f107';
+                display: inline-block;
+                position: absolute;
+                right: 8px;
+                top: 0;
+
+            }
+
+        }
+
+        .has-children > a:after {
+
+            content: '\f105';
+
+        }
+
+    }
+
+}
+
+.scrolled {
+
+    .header {
+
+        top: rem-calc(-100);
+
+    }
+
+}
+
+.menu-open {
+
+    .header {
+
+        top: rem-calc(0);
+
+    }
+
+}
+
+.changeColor {
+
+    .main-nav {
+
+        a {
+
+            color: $blue;
+
+        }
+
+    }
+
+}

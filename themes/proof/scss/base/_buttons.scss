@@ -1,0 +1,17 @@
+.button {
+
+    @extend %light;
+
+    text-transform: uppercase;
+    position: relative;
+    padding: rem-calc(8 16);
+    letter-spacing: rem-calc(8);
+
+    &.primary {
+
+        color: $blue;
+        border: rem-calc(2) solid $blue;
+
+    }
+
+}

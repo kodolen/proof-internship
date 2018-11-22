@@ -1,0 +1,26 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+    {% include 'elements/home-visual.html.twig' %}
+
+    <div class="content-block">
+        <div class="row">
+            <div class="column medium-8 medium-offset-2">
+
+                <span class="quote">{{ page.header.quote }}</span>
+
+                <p>{{ page.content }}</p>
+                <p>{{ page.title }}</p>
+
+                <h1>{{page.header.custom.textField}}</h1>
+
+                {{ dump("oke") }}
+
+                <a href="#" class="button primary">Over Redkiwi</a>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

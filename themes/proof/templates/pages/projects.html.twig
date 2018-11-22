@@ -1,0 +1,15 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+    <ul>
+        {% for p in page.find('/projecten').children if p != page %}
+            <li><a href="{{p.url}}">{{ p.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    {{page.header.an_example_text_field}}
+
+    {{ page.header.test }}
+
+{% endblock %}

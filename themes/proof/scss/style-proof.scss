@@ -1,0 +1,25 @@
+/*
+
+project: Proof
+
+*/
+
+@import '_settings';
+
+//Base
+@import 'base/_foundation';
+@import 'base/_typography';
+@import 'base/_buttons';
+
+// Mixins
+@import 'mixins/_mixins';
+
+//Layout
+@import 'layout/_header';
+@import 'layout/_footer';
+
+//Parts
+@import 'parts/_home-visual';
+
+//Partials
+@import 'partials/_hamburger';
