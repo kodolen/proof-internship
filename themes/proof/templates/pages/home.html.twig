@@ -13,7 +13,7 @@
                 <p>{{ page.content }}</p>
                 <p>{{ page.title }}</p>
 
-                <h1>{{page.header.custom.textField}}</h1>
+                <h1>{{ page.header.custom.textField }}</h1>
 
                 {{ dump("oke") }}
 
@@ -22,5 +22,19 @@
             </div>
         </div>
     </div>
+
+    {% for test in page.header.test_fields %}
+
+        <div class="row">
+            <div class="column medium-8 medium-offset-2">
+
+                <h1>{{ test.title }}</h1>
+                <h2>{{ test.caption }}</h2>
+                <p>{{ test.textarea }}</p>
+
+            </div>
+        </div>
+
+    {% endfor %}
 
 {% endblock %}
