@@ -1,0 +1,29 @@
+title: Redkiwi
+'@extends':
+    type: default #choose template here, for example, if we are adding custom fields to default.html.twig – then we would put 'default' here under type. if we were adding custom fields to a template coolpage.html.twig, we would put 'page' here.
+    context: blueprints://pages
+
+form:
+    fields:
+        tabs:
+            type: tabs
+            active: 1
+
+            fields:
+                content:
+                    fields:
+                        header.custom_text_fields:
+                            name: fields
+                            type: list
+                            style: vertical
+                            label: fields
+                            fields:
+                                .title:
+                                    type: text
+                                    label: Title
+                                .caption:
+                                    type: text
+                                    label: Caption
+                                .textarea:
+                                    type: textarea
+                                    label: textarea

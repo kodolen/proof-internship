@@ -2,30 +2,17 @@
 
 {% block content %}
 
-    <div class="quote-block">
+    <div class="top-content">
         <div class="row">
-            <div class="column medium-8 medium-offset-2">
+            <div class="column medium-6 medium-offset-0">
 
-                <span class="quote">{{ page.header.quote }}</span>
+                <h1>Redkiwi</h1>
+                <p>dawdawda
+                dawdawwa
+                dawdaw</p>
 
             </div>
         </div>
     </div>
-
-    {% for text in page.header.custom_text_fields %}
-
-        <div class="row">
-            <div class="column medium-6 medium-offset-3">
-                <div class="content-block-text">
-
-                    <h2>{{ text.title }}</h2>
-                    <span class="caption">{{ text.caption }}</span>
-                    <p>{{ text.textarea }}</p>
-
-                </div>
-            </div>
-        </div>
-
-    {% endfor %}
 
 {% endblock %}
