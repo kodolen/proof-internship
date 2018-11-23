@@ -16,8 +16,9 @@ form:
                             type: text
                             label: Title of project
                         header.image: #see comment above, creates a place to select specific media from the uploader, useful for highlighting a featured image, icon or logo
-                            type: pagemediaselect
+                            type: file
                             label: Upload image
+                            destination: 'user/themes/proof/assets'
                         header.intro:  #see comment above, created an additional markdown enabled text editor, useful for multiple text blocks. This is more advanced you must use the |markdown filter to make it appear as markdown in the template file ex: {{page.header.another_markdown_area |markdown}}
                             type: markdown
                             label: Intro
