@@ -26,8 +26,11 @@ form:
                             validate:
                                 type: textarea
                         header.taxonomy:
-                            type: array
-                            label: Eindkwalificaties
+                            type: taxonomy
+                            label: PLUGIN_ADMIN.TAXONOMY
+                            multiple: true
+                            validate:
+                                type: array
 
 
 
