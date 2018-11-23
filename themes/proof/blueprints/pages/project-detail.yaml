@@ -25,13 +25,17 @@ form:
                             showPreview: true
                             validate:
                                 type: textarea
-                        taxonomies:
-                            type: selectize
-                            size: large
-                            label: PLUGIN_ADMIN.TAXONOMY_TYPES
-                            classes: fancy
-                            help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
-                            validate:
-                                type: commalist
+                        header.qualifications:
+                            type: select_optgroup
+                            label: Eindkwalificaties
+                            options:
+                            - OptGroup1:
+                              - Option1
+                              - Option2
+                            - OptGroup2:
+                              - Option3
+                              - Option4
+                        
+
 
 
