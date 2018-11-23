@@ -16,14 +16,23 @@
 
                         <div class="row">
                             <div class="column medium-6">
-                                
-                                <h1>{{ p.header.title }}</h1>
-                                <p>{{ p.header.intro }}</p>
+
+                                <div class="content">
+
+                                    <h1>{{ p.header.title }}</h1>
+                                    <p>{{ p.header.intro }}</p>
+                                    <a href="{{ p.url }}" class="primary button">Bekijk project</a>
+
+                                </div>
 
                             </div>
                         </div>
 
-                        <img src="{{ (p.header.image|first).path }}" alt=""/>
+                        <div class="image-holder">
+
+                            <img src="{{ (p.header.image|first).path }}" alt=""/>
+
+                        </div>
 
                     </div>
 
