@@ -4,6 +4,7 @@ let $menuToggle = $('.menu-toggle');
 let menuOpen = false;
 
 $(document).ready(function () {
+
     //initialize swiper when document ready
     var swiper = new Swiper('.swiper-container', {
         autoplay: 5000,
@@ -12,16 +13,12 @@ $(document).ready(function () {
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
+            clickable: true,
         },
-    });
-
-    var mySwiper = document.querySelector('.swiper-container').swiper;
-
-    $('.swiper-button-next').click(function () {
-        mySwiper.slideNext();
-    });
-    $('.swiper-button-prev').click(function () {
-        mySwiper.slidePrev();
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
 
 });
