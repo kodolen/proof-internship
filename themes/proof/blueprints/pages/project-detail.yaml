@@ -29,9 +29,9 @@ form:
                             type: checkboxes
                             label: A couple of checkboxes
                             default:
-                                option1: true
-                                option2: true
-                                option3: true
+                                option1: 1.1 Technische kennis en analyse
+                                option2: 1.2 Ontwikkelen en prototypen
+                                option3: 1.3 Testen en implementeren
                             options:
                                 option1: 1.1 Technische kennis en analyse
                                 option2: 1.2 Ontwikkelen en prototypen

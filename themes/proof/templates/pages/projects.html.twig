@@ -22,6 +22,13 @@
                                 <div class="content">
 
                                     <h1>{{ p.header.title }}</h1>
+
+                                    {% for tags in p.header.my_field %}
+
+                                        <span class="caption">{{ tags }}</span>
+
+                                    {% endfor %}
+
                                     <p>{{ p.header.intro }}</p>
                                     <a href="{{ p.url }}" class="primary button">Bekijk project</a>
 
