@@ -25,15 +25,14 @@ form:
                             showPreview: true
                             validate:
                                 type: textarea
-                        taxonomies:
-                            fields:
-                                header.taxonomy:
-                                    default:
-                                        category: ['blog','page']
-                                        tag: ['test']
-                                    options:
-                                        category: ['grav']
-                                    validate:
-                                        type: commalist
+                        header.taxonomy:
+                            taxonomies:
+                                type: selectize
+                                size: large
+                                label: PLUGIN_ADMIN.TAXONOMY_TYPES
+                                classes: fancy
+                                help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
+                                validate:
+                                    type: commalist
 
 
