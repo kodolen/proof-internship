@@ -2,35 +2,42 @@
 
 {% block content %}
 
-    <div class="header-container"></div>
+    <div class="swiper-content">
 
-    <!-- Slider main container -->
-    <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
 
-            <!-- Slides -->
-            {% for p in page.find('/projecten').children if p != page %}
+                <!-- Slides -->
+                {% for p in page.find('/projecten').children if p != page %}
 
-                <div class="swiper-slide">
+                    <div class="swiper-slide">
 
-                    <img src="{{ (p.media.images|first) }}" alt=""/>
+                        <div class="row">
+                            <div class="column medium-6">
+                                
+                                <h1>{{ p.header.title }}</h1>
+                                <p>{{ p.header.intro }}</p>
 
-                </div>
+                            </div>
+                        </div>
 
-            {% endfor %}
+                        <img src="{{ (p.header.image|first).path }}" alt=""/>
 
-            {#{% for p in page.find('/projecten').children if p != page %}#}
-                {#<li><a href="{{p.url}}">{{ p.title }}</a></li>#}
-            {#{% endfor %}#}
+                    </div>
+
+                {% endfor %}
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
 
     </div>
 
