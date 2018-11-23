@@ -23,9 +23,14 @@
 
                                     <h1>{{ p.header.title }}</h1>
 
-                                        {#<span class="caption">{{ p.header.taxanomy }}</span>#}
+                                    {% for q in p.header.qualifications %}
+
+                                        <span class="caption">{{ q.qualification }}</span>
+
+                                    {% endfor %}
 
                                     <p>{{ p.header.intro }}</p>
+
                                     <a href="{{ p.url }}" class="primary button">Bekijk project</a>
 
                                 </div>
