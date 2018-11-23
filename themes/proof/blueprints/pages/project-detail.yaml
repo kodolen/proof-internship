@@ -25,14 +25,13 @@ form:
                             showPreview: true
                             validate:
                                 type: textarea
-                        header.taxonomy:
-                            taxonomies:
-                                type: selectize
-                                size: large
-                                label: PLUGIN_ADMIN.TAXONOMY_TYPES
-                                classes: fancy
-                                help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
-                                validate:
-                                    type: commalist
+                        taxonomies:
+                            type: selectize
+                            size: large
+                            label: PLUGIN_ADMIN.TAXONOMY_TYPES
+                            classes: fancy
+                            help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
+                            validate:
+                                type: commalist
 
 
