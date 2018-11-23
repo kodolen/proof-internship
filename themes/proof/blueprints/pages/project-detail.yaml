@@ -26,16 +26,22 @@ form:
                             validate:
                                 type: textarea
                         header.qualifications:
-                            type: select_optgroup
-                            label: Eindkwalificaties
-                            options:
-                            - OptGroup1:
-                              - Option1
-                              - Option2
-                            - OptGroup2:
-                              - Option3
-                              - Option4
-                        
+                            name: fields
+                            type: list
+                            style: vertical
+                            label: Kwalificaties
+                            fields:
+                                .qualification:
+                                    type: select_optgroup
+                                    label: Eindkwalificatie
+                                    options:
+                                    - Ontwikkelen 1:
+                                        - 1.1 Technische kennis en analyse
+                                        - 1.2 Ontwikkelen en prototypen
+                                        - 1.3 Testen en implementeren
+                                    - Onderzoeken en analyseren 2:
+                                        - 2.1 Onderzoeken en analyseren
+
 
 
 
