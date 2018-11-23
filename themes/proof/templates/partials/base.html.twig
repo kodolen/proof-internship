@@ -37,6 +37,7 @@
     </div>
 {% endblock %}
 
+
 {% block body %}
     <section id="body">
         <div class="wrapper padding">
@@ -54,15 +55,17 @@
 {% endblock %}
 
 {% block javascripts %}
-    {% do assets.addJs('jquery', 100) %}
-    {% do assets.addJs('theme://js/app.js', 100) %}
-    {% do assets.addJs('https://requirejs.org/docs/release/2.3.5/minified/require.js', 100) %}
+    {% do assets.addJs('jquery', 3) %}
+    {% do assets.addJs('./../../../../../node_modules/swiper/scrc/swiper.js', 98) %}
+    {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js', 2) %}
+    {% do assets.addJs('theme://js/app.js', 1) %}
 {% endblock %}
 {{ assets.js() }}
 
 {% block bottom %}
     {{ assets.js('bottom') }}
 {% endblock %}
+
 
 </body>
 </html>

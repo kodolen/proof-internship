@@ -2,14 +2,25 @@
 
 {% block content %}
 
-    <ul>
-        {% for p in page.find('/projecten').children if p != page %}
-            <li><a href="{{p.url}}">{{ p.title }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class="header-container"></div>
 
-    {{page.header.an_example_text_field}}
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-    {{ page.header.test }}
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
 
 {% endblock %}
