@@ -12,15 +12,15 @@ form:
             fields:
                 content:
                     fields:
-                        header.an_example_text_field: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
+                        header.title: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
                             type: text
-                            label: Additional Title
-                        header.icon_image: #see comment above, creates a place to select specific media from the uploader, useful for highlighting a featured image, icon or logo
+                            label: Title of project
+                        header.image: #see comment above, creates a place to select specific media from the uploader, useful for highlighting a featured image, icon or logo
                             type: pagemediaselect
-                            label: choose a piece of media for a task
-                        header.another_markdown_area:  #see comment above, created an additional markdown enabled text editor, useful for multiple text blocks. This is more advanced you must use the |markdown filter to make it appear as markdown in the template file ex: {{page.header.another_markdown_area |markdown}}
+                            label: Upload image
+                        header.intro:  #see comment above, created an additional markdown enabled text editor, useful for multiple text blocks. This is more advanced you must use the |markdown filter to make it appear as markdown in the template file ex: {{page.header.another_markdown_area |markdown}}
                             type: markdown
-                            label: MD2
+                            label: Intro
                             showPreview: true
                             validate:
                                 type: textarea
