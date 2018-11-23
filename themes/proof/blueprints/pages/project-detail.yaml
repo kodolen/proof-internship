@@ -1,0 +1,28 @@
+title: Project detail
+'@extends':
+    type: default #choose template here, for example, if we are adding custom fields to default.html.twig – then we would put 'default' here under type. if we were adding custom fields to a template coolpage.html.twig, we would put 'page' here.
+    context: blueprints://pages
+
+form:
+    fields:
+        tabs:
+            type: tabs
+            active: 1
+
+            fields:
+                content:
+                    fields:
+                        header.title: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
+                            type: text
+                            label: Title of project
+                        header.image: #see comment above, creates a place to select specific media from the uploader, useful for highlighting a featured image, icon or logo
+                            type: file
+                            label: Upload image
+                            destination: 'user/themes/proof/assets'
+                        header.intro:  #see comment above, created an additional markdown enabled text editor, useful for multiple text blocks. This is more advanced you must use the |markdown filter to make it appear as markdown in the template file ex: {{page.header.another_markdown_area |markdown}}
+                            type: markdown
+                            label: Intro
+                            showPreview: true
+                            validate:
+                                type: textarea
+
