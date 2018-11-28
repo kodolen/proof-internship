@@ -30,23 +30,23 @@
 
     </div>
 
-    {% if page.header.intro %}
+    {% if page.header.content-intro %}
 
     <div class="row">
         <div class="column medium-10 medium-offset-1">
 
-            <p> {{ page.header.intro }} </p>
+            <p> {{ page.header.content_intro }} </p>
 
         </div>
     </div>
 
     {% endif %}
 
-    {% if page.header.content-block %}
+    {% if page.header.content_block %}
 
         <div class="content-container">
 
-            {% for c in page.header.content-block %}
+            {% for c in page.header.content_block %}
 
                 <div class="content-wrapper">
                     <div class="row">
