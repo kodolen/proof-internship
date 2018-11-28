@@ -4707,12 +4707,13 @@ button.swiper-pagination-bullet {
 .swiper-content .content p {
   padding-bottom: 1rem;
 }
-.swiper-content .image-holder {
+
+.image-holder {
   width: 100%;
   height: auto;
   padding-top: 11.25rem;
 }
-.swiper-content .image-holder img {
+.image-holder img {
   display: block;
   margin: auto;
 }

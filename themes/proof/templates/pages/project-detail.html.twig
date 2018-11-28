@@ -2,7 +2,32 @@
 
 {% block content %}
 
-    <h1>{{ page.header.title }}</h1>
-    <p>{{ page.header.intro }}</p>
+    <div class="project-bg"></div>
+
+    <div class="row">
+        <div class="column medium-6">
+
+            <div class="content">
+
+                <h1>{{ page.header.title }}</h1>
+
+                {% for q in page.header.qualifications %}
+
+                    <span class="caption">{{ q.qualification }}</span>
+
+                {% endfor %}
+
+                <p>{{ page.header.intro }}</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="image-holder">
+
+        <img src="{{ (page.header.image|first).path }}" alt=""/>
+
+    </div>
 
 {% endblock %}
