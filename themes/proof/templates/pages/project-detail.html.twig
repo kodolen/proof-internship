@@ -30,4 +30,47 @@
 
     </div>
 
+    {% if page.header.intro %}
+
+    <div class="row">
+        <div class="column medium-10 medium-offset-1">
+
+            <p> {{ page.header.intro }} </p>
+
+        </div>
+    </div>
+
+    {% endif %}
+
+    {% if page.header.content-block %}
+
+        <div class="content-container">
+
+            {% for c in page.header.content-block %}
+
+                <div class="content-wrapper">
+                    <div class="row">
+
+                        <div class="column medium-4 medium-offset-1">
+
+                            <h2> {{ c.title }} </h2>
+                            <p> {{ c.text }} </p>
+
+                        </div>
+
+                        <div class="column medium-5 medium-offset-1">
+
+                            <img src="{{ (c.image|first).path }}" alt="" />
+
+                        </div>
+
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    {% endif %}
+
 {% endblock %}

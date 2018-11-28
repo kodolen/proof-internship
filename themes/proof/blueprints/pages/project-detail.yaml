@@ -51,7 +51,7 @@ form:
                                         - 5.1 Lerend vermogen
                                         - 5.2 Maatschappelijke verantwoordelijkheid
                         header.content-intro:
-                            type: text
+                            type: textarea
                             label: Content intro tekst
                         header.content-block:
                             name: fields
