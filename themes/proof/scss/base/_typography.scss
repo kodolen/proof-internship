@@ -67,6 +67,18 @@
 
 }
 
+@font-face {
+    font-family: 'MontserratExtraLight';
+    src: url('../fonts/montserrat-extralight-webfont.eot');
+    src: url('../fonts/montserrat-extraight-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/montserrat-extralight-webfont.woff2') format('woff2'),
+    url('../fonts/montserrat-extralight-webfont.woff') format('woff'),
+    url('../fonts/montserrat-extralight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 %bold {
 
     font-family: 'SourceSansProBold';
@@ -88,6 +100,12 @@
 %light {
 
     font-family: 'SourceSansProLight';
+
+}
+
+%extra-light {
+
+    font-family: 'MontserratExtraLight';
 
 }
 
@@ -142,9 +160,9 @@ h3 {
 
 p {
 
-    @extend %light;
+    @extend %extra-light;
 
-    font-size: 14px;
+    font-size: rem-calc(14);
     line-height: 26px;
 
     @include breakpoint(medium) {

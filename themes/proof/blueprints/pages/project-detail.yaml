@@ -50,6 +50,30 @@ form:
                                     - Betrokken 5:
                                         - 5.1 Lerend vermogen
                                         - 5.2 Maatschappelijke verantwoordelijkheid
+                        header.content-intro:
+                            type: text
+                            label: Content intro tekst
+                        header.content-block:
+                            name: fields
+                            type: list
+                            style: vertical
+                            label: Content blok
+                            fields:
+                                .title:
+                                    type: text
+                                    label: Title
+                                .text:
+                                    type: textarea
+                                    label: Content tekst
+                                .image:
+                                    type: file
+                                    label: Upload image
+                                    destination: 'user/themes/proof/assets'
+                        header.content-reflection:
+                            type: textarea
+                            label: Reflectie
+
+
 
 
 

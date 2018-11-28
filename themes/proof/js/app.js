@@ -1,5 +1,5 @@
 let $window = $(window);
-let $body = $('body');
+const $body = $('body');
 let $menuToggle = $('.menu-toggle');
 let menuOpen = false;
 
@@ -10,6 +10,7 @@ $(document).ready(function () {
         autoplay: 5000,
         allowTouchMove: true,
         parallax: true,
+        speed: 1000,
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
@@ -47,7 +48,7 @@ $window.on('scroll', function () {
 
     let scrollTop = $window.scrollTop();
 
-    if (scrollTop > $('.home-visual').height() - 50) {
+    if (scrollTop > $('.home-visual').height() - 50 ) {
 
         $body.addClass(('changeColor'));
 

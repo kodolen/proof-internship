@@ -3649,6 +3649,13 @@ ol.list-upper-roman {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "MontserratExtraLight";
+  src: url("../fonts/montserrat-extralight-webfont.eot");
+  src: url("../fonts/montserrat-extraight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-extralight-webfont.woff2") format("woff2"), url("../fonts/montserrat-extralight-webfont.woff") format("woff"), url("../fonts/montserrat-extralight-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .footer .footer-content .linkedin {
   font-family: "SourceSansProBold";
 }
@@ -3657,8 +3664,12 @@ ol.list-upper-roman {
   font-family: "SourceSansProSemibold";
 }
 
-.header a, .caption, .quote, p {
+.header a, .caption, .quote {
   font-family: "SourceSansProLight";
+}
+
+p {
+  font-family: "MontserratExtraLight";
 }
 
 .home-visual .content span, .home-visual .content h2, .header .logo {
@@ -3694,7 +3705,7 @@ h3 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 26px;
 }
 @media print, screen and (min-width: 40em) {
@@ -3739,6 +3750,7 @@ a:hover {
   position: relative;
   padding: 0.5rem 1rem;
   letter-spacing: 0.25rem;
+  transition: all 0.5s ease-out;
 }
 .button.primary {
   color: #FFFFFF;
@@ -4690,7 +4702,10 @@ button.swiper-pagination-bullet {
   padding-top: 6.25rem;
 }
 .swiper-content .content h1 {
-  margin-bottom: -0.5rem;
+  margin-bottom: -1rem;
+}
+.swiper-content .content p {
+  padding-bottom: 1rem;
 }
 .swiper-content .image-holder {
   width: 100%;
