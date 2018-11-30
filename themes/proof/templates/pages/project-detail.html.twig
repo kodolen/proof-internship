@@ -4,41 +4,47 @@
 
     <div class="project-bg"></div>
 
-    <div class="row">
-        <div class="column medium-6">
+    <div class="project-preview-wrapper">
+        <div class="row">
+            <div class="column medium-6">
+                <div class="content-slider">
 
-            <div class="content">
+                    <h1>{{ page.header.title }}</h1>
 
-                <h1>{{ page.header.title }}</h1>
+                    {% for q in page.header.qualifications %}
 
-                {% for q in page.header.qualifications %}
+                        <span class="caption">{{ q.qualification }}</span>
 
-                    <span class="caption">{{ q.qualification }}</span>
+                    {% endfor %}
 
-                {% endfor %}
+                    <p>{{ page.header.intro }}</p>
 
-                <p>{{ page.header.intro }}</p>
-
+                </div>
             </div>
+        </div>
 
+        <div class="row">
+            <div class="column">
+                <div class="image-preview-holder">
+
+                    <img src="../{{ (page.header.image|first).path }}" alt=""/>
+
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="image-holder">
+    {% if page.header.content_intro %}
 
-        <img src="../{{ (page.header.image|first).path }}" alt=""/>
+        <div class="row">
+            <div class="column small-12">
+                <div class="intro-content">
 
-    </div>
+                    <p>{{ page.header.content_intro }}</p>
 
-    {% if page.header.content-intro %}
-
-    <div class="row">
-        <div class="column medium-10 medium-offset-1">
-
-            <p> {{ page.header.content_intro }} </p>
-
+                </div>
+            </div>
         </div>
-    </div>
 
     {% endif %}
 
@@ -46,28 +52,39 @@
 
         <div class="content-container">
 
-            {% for c in page.header.content_block %}
+            {% for content in page.header.content_block %}
 
                 <div class="content-wrapper">
                     <div class="row">
-
-                        <div class="column medium-4 medium-offset-1">
-
-                            <h2> {{ c.title }} </h2>
-                            <p> {{ c.text }} </p>
-
+                        <div class="column medium-4 medium-offset-1{% if loop.index is divisibleby(2) %} even{% endif %}">
+                            <h2> {{ content.title }} </h2>
+                            <p> {{ content.text }} </p>
                         </div>
-
                         <div class="column medium-5 medium-offset-1">
-
-                            <img src="{{ (c.image|first).path }}" alt="" />
-
+                            <div class="image-content-holder">
+                                <img src="../{{ (content.image | first).path }}" alt=""/>
+                            </div>
                         </div>
-
                     </div>
                 </div>
 
             {% endfor %}
+
+            {% if page.header.content_reflection %}
+
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="column small-12">
+
+                            {#TODO Add translation#}
+                            <h2>Reflectie</h2>
+                            <p>{{ page.header.content_reflection }}</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
 
         </div>
 

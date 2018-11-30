@@ -1,13 +1,27 @@
 .header {
 
+    background-color: $blue;
     color: $white;
+    height: auto;
+    opacity: 0;
     overflow: hidden;
     padding: rem-calc(10);
     position: fixed;
-    top: 0;
+    top: rem-calc(-100);
     transition: all 0.5s ease-out;
-    width: 100%;
+    visibility: hidden;
+    width: 60%;
     z-index: 20;
+
+    @include breakpoint(medium) {
+
+        background-color: transparent;
+        opacity: 1;
+        top: 0;
+        visibility: visible;
+        width: 100%;
+
+    }
 
     .padding {
 
@@ -153,7 +167,9 @@
 
     .header {
 
+        opacity: 1;
         top: rem-calc(0);
+        visibility: visible;
 
     }
 
@@ -163,9 +179,13 @@
 
     .main-nav {
 
-        a {
+        @include breakpoint(medium) {
 
-            color: $blue;
+            a {
+
+                color: $blue
+
+            }
 
         }
 

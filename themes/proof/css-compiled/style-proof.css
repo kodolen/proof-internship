@@ -24,7 +24,7 @@ project: Proof
   }
 }
 .row {
-  max-width: 75rem;
+  max-width: 100%;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -2437,7 +2437,7 @@ html.is-reveal-open body {
 @media print, screen and (min-width: 40em) {
   .reveal {
     width: 600px;
-    max-width: 75rem;
+    max-width: 100%;
   }
 }
 .reveal.collapse {
@@ -2446,19 +2446,19 @@ html.is-reveal-open body {
 @media print, screen and (min-width: 40em) {
   .reveal.tiny {
     width: 30%;
-    max-width: 75rem;
+    max-width: 100%;
   }
 }
 @media print, screen and (min-width: 40em) {
   .reveal.small {
     width: 50%;
-    max-width: 75rem;
+    max-width: 100%;
   }
 }
 @media print, screen and (min-width: 40em) {
   .reveal.large {
     width: 90%;
-    max-width: 75rem;
+    max-width: 100%;
   }
 }
 .reveal.full {
@@ -3672,7 +3672,7 @@ p {
   font-family: "MontserratExtraLight";
 }
 
-.home-visual .content span, .home-visual .content h2, .header .logo {
+.header .logo {
   font-family: "SfProBold";
 }
 
@@ -3691,6 +3691,11 @@ h2 {
 }
 @media print, screen and (min-width: 40em) {
   h2 {
+    font-size: 1.5rem;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  h2 {
     font-size: 2rem;
   }
 }
@@ -3705,13 +3710,13 @@ h3 {
 }
 
 p {
-  font-size: 0.875rem;
-  line-height: 26px;
+  font-size: 0.75rem;
+  line-height: 1.625rem;
 }
 @media print, screen and (min-width: 40em) {
   p {
     font-size: 1rem;
-    line-height: 2.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -3722,7 +3727,7 @@ p {
 @media print, screen and (min-width: 40em) {
   .quote {
     font-size: 2rem;
-    line-height: 3.75rem;
+    line-height: 3.125rem;
   }
 }
 
@@ -3746,31 +3751,38 @@ a:hover {
 }
 
 .button {
-  text-transform: uppercase;
-  position: relative;
-  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
   letter-spacing: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  text-transform: uppercase;
   transition: all 0.5s ease-out;
 }
+@media print, screen and (min-width: 40em) {
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
 .button.primary {
-  color: #FFFFFF;
   background-color: #4990E2;
   border: 0.125rem solid #4990E2;
+  color: #FFFFFF;
 }
 .button.primary:hover {
-  color: #4990E2;
   background-color: #FFFFFF;
   border: 0.125rem solid #4990E2;
+  color: #4990E2;
 }
 .button.secondary {
-  color: #4990E2;
   background-color: #FFFFFF;
   border: 0.125rem solid #4990E2;
+  color: #4990E2;
 }
 .button.secondary:hover {
-  color: #FFFFFF;
   background-color: #4990E2;
   border: 0.125rem solid #4990E2;
+  color: #FFFFFF;
 }
 
 /**
@@ -4495,14 +4507,27 @@ button.swiper-pagination-bullet {
 }
 
 .header {
+  background-color: #4990E2;
   color: #FFFFFF;
+  height: auto;
+  opacity: 0;
   overflow: hidden;
   padding: 0.625rem;
   position: fixed;
-  top: 0;
+  top: -6.25rem;
   transition: all 0.5s ease-out;
-  width: 100%;
+  visibility: hidden;
+  width: 60%;
   z-index: 20;
+}
+@media print, screen and (min-width: 40em) {
+  .header {
+    background-color: transparent;
+    opacity: 1;
+    top: 0;
+    visibility: visible;
+    width: 100%;
+  }
 }
 .header .padding {
   padding: 1rem 0;
@@ -4578,17 +4603,25 @@ button.swiper-pagination-bullet {
 }
 
 .menu-open .header {
+  opacity: 1;
   top: 0;
+  visibility: visible;
 }
 
-.changeColor .main-nav a {
-  color: #4990E2;
+@media print, screen and (min-width: 40em) {
+  .changeColor .main-nav a {
+    color: #4990E2;
+  }
 }
 
 .footer {
   background-color: #2A5484;
-  margin-top: rem(80);
-  padding: 1rem;
+  padding: 0.5rem;
+}
+@media print, screen and (min-width: 40em) {
+  .footer {
+    padding: 1rem;
+  }
 }
 .footer .footer-content {
   align-items: center;
@@ -4604,39 +4637,45 @@ button.swiper-pagination-bullet {
 }
 
 .home-visual {
-  height: 100vh;
-  width: 100%;
-  background: #4990E2;
+  animation: 800ms forwards 200ms appear;
   align-items: center;
-  justify-content: center;
+  background: #4990E2;
   display: flex;
+  height: 100vh;
+  justify-content: center;
   position: relative;
-}
-.home-visual .content {
-  width: auto;
-  text-align: center;
-  color: #FFFFFF;
-  margin-bottom: 3.75rem;
-  z-index: 1;
-}
-.home-visual .content h2 {
-  border-bottom: 0.125rem solid #FFFFFF;
-  margin-bottom: 1rem;
-}
-.home-visual .content span {
-  font-size: 1.25rem;
-  letter-spacing: 1.875rem;
-  margin-top: 0.5rem;
+  width: 100%;
 }
 .home-visual img {
-  width: 35%;
-  position: absolute;
+  animation: 800ms forwards 200ms appear;
   bottom: 0;
-  opacity: 0.3;
+  opacity: 0;
+  position: absolute;
+  width: 90%;
+}
+@media print, screen and (min-width: 40em) {
+  .home-visual img {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 75em) {
+  .home-visual img {
+    width: 35%;
+  }
 }
 
 .content-block-text {
-  margin: 6.25rem 0 6.25rem 0;
+  padding: 0.5rem 0;
+}
+@media print, screen and (min-width: 40em) {
+  .content-block-text {
+    padding: 5rem 0;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .content-block-text {
+    padding: 6.25rem 0;
+  }
 }
 .content-block-text h2 {
   margin-bottom: -0.5rem;
@@ -4651,16 +4690,28 @@ button.swiper-pagination-bullet {
 
 .quote-block {
   background-color: #F7F7F7;
-  width: 100%;
+  padding: 2rem 0;
   text-align: center;
-  padding: 4.5rem 0 4.5rem 0;
+  width: 100%;
+}
+@media print, screen and (min-width: 40em) {
+  .quote-block {
+    padding: 2.5rem 0;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .quote-block {
+    padding: 4.5rem 0;
+  }
 }
 
 .top-content {
-  width: 100%;
-  height: 60vh;
+  animation: 800ms forwards 200ms appear;
   background: rgba(247, 247, 247, 0.5);
+  height: 60vh;
+  opacity: 0;
   padding-top: 12.5rem;
+  width: 100%;
 }
 
 .summary-wrapper {
@@ -4688,44 +4739,95 @@ button.swiper-pagination-bullet {
 }
 
 .project-bg {
+  background: rgba(247, 247, 247, 0.8);
+  height: 80vh;
   position: absolute;
   width: 100%;
-  height: 80vh;
-  background: rgba(247, 247, 247, 0.8);
   z-index: -20;
+}
+
+.project-preview-wrapper {
+  height: 100vh;
 }
 
 .swiper-content {
   position: relative;
 }
-.swiper-content .content {
+
+.content-slider {
   padding-top: 6.25rem;
+  position: relative;
 }
-.swiper-content .content h1 {
+.content-slider h1 {
   margin-bottom: -1rem;
 }
-.swiper-content .content p {
+.content-slider p {
   padding-bottom: 1rem;
 }
 
-.image-holder {
-  width: 100%;
+.image-preview-holder {
+  bottom: 2.5rem;
   height: auto;
-  padding-top: 11.25rem;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
 }
-.image-holder img {
+.image-preview-holder img {
   display: block;
   margin: auto;
+  width: 100%;
+}
+@media print, screen and (min-width: 40em) {
+  .image-preview-holder img {
+    width: 30%;
+  }
+}
+
+.intro-content {
+  padding: 2.5rem 0;
+}
+
+.content-container {
+  width: 100%;
+}
+.content-container .content-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+.content-container .content-wrapper .image-content-holder {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+.content-container .content-wrapper:nth-child(odd) {
+  background: rgba(247, 247, 247, 0.5);
+}
+.content-container .content-wrapper:last-child {
+  height: auto;
+  padding: 2.5rem 0;
+}
+
+.even {
+  order: 2;
 }
 
 .menu-toggle {
-  background-color: red;
   cursor: pointer;
   position: fixed;
-  right: 6.25rem;
-  top: -3.125rem;
+  right: 4.6875rem;
+  top: 2rem;
   transition: all 0.5s ease-out;
   z-index: 99;
+}
+@media print, screen and (min-width: 40em) {
+  .menu-toggle {
+    right: 6.25rem;
+    top: -3.125rem;
+  }
 }
 .menu-toggle .hamburger {
   padding: 0.5rem;
@@ -4737,9 +4839,9 @@ button.swiper-pagination-bullet {
   height: 0.1875rem;
   margin-bottom: 0.25rem;
   position: relative;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   width: 1.875rem;
   z-index: 50;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 .menu-toggle .hamburger span:last-child {
   margin-bottom: 0;
@@ -4750,9 +4852,9 @@ button.swiper-pagination-bullet {
 }
 
 .menu-open .hamburger span {
-  transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.22s ease;
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -8px);
+  transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.22s ease;
 }
 .menu-open .hamburger span:nth-last-child(2) {
   opacity: 0;
@@ -4765,6 +4867,12 @@ button.swiper-pagination-bullet {
 
 .changeColor .hamburger span {
   background: #4990E2;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style-proof.css.map */

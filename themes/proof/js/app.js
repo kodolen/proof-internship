@@ -22,6 +22,11 @@ $(document).ready(function () {
         },
     });
 
+    $(function() {
+        $('html, body').animate({
+            scrollTop: $('.intro-content').offset().top}, 1000);
+    });
+
 });
 
 $window.on('scroll', function () {

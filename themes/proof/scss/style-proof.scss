@@ -28,6 +28,10 @@ project: Proof
 @import 'parts/_top-content.scss';
 @import 'parts/_bottom-content.scss';
 @import 'parts/_project-slider.scss';
+@import 'parts/_project-content.scss';
 
 //Partials
 @import 'partials/_hamburger';
+
+//Animations
+@import 'animations/_animations.scss';

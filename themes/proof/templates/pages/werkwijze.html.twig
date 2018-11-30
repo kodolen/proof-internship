@@ -2,50 +2,62 @@
 
 {% block content %}
 
-    <div class="top-content">
-        <div class="row">
-            <div class="column medium-6 medium-offset-0">
+    {% include 'elements/top-content.html.twig' %}
 
-                <h1>{{ page.title }}</h1>
-                <p>{{ page.content }}</p>
+    {% if page.header.custom_text_fields %}
 
-            </div>
-        </div>
-    </div>
+        {% for text in page.header.custom_text_fields %}
 
-    {% for text in page.header.custom_text_fields %}
+            <div class="row">
+                <div class="column medium-6 medium-offset-3">
+                    <div class="content-block-text">
+                        <div class="row">
 
-        <div class="row">
-            <div class="column medium-6 medium-offset-3">
-                <div class="content-block-text">
-                    <div class="row">
-                        <div class="column medium-2">
+                            {% if text.image %}
 
-                            <img src="{{ (text.image|first).path }}" alt=""/>
+                                <div class="column medium-2">
+
+                                    <img src="{{ (text.image|first).path }}" alt=""/>
+
+                                </div>
+
+                            {% endif %}
+
+                            {% if text.title and text.caption %}
+
+                                <div class="column medium-6">
+
+                                    <h2>{{ text.title }}</h2>
+
+                                    <span class="caption">{{ text.caption }}</span>
+
+                                </div>
+
+                            {% endif %}
 
                         </div>
-                        <div class="column medium-6">
 
-                            <h2>{{ text.title }}</h2>
+                        <div class="row">
+                            <div class="column medium-12">
 
-                            <span class="caption">{{ text.caption }}</span>
+                                <p>{{ text.textarea }}</p>
+
+                            </div>
+                        </div>
+
+                        <div class="button-wrapper">
+
+                            <a href="{{ text.link }}" class="primary button">Website</a>
+                            <a href="#" class="secondary button">Lees meer</a>
 
                         </div>
-                    </div>
-
-                    <p>{{ text.textarea }}</p>
-
-                    <div class="button-wrapper">
-
-                        <a href="{{ text.link }}" class="primary button">Website</a>
-                        <a href="#" class="secondary button">Lees meer</a>
-
                     </div>
                 </div>
             </div>
-        </div>
 
-    {% endfor %}
+        {% endfor %}
+
+    {% endif %}
 
     <div class="summary-wrapper">
         <div class="row">

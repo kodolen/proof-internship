@@ -4,43 +4,20 @@
 
     {% include 'elements/home-visual.html.twig' %}
 
-    <div class="quote-block">
-        <div class="row">
-            <div class="column medium-8 medium-offset-2">
+    {% if page.header.quote %}
 
-                <span class="quote">{{ page.header.quote }}</span>
+        <div class="quote-block">
+            <div class="row">
+                <div class="column medium-8 medium-offset-2">
 
-            </div>
-        </div>
-    </div>
-
-    {% for text in page.header.custom_text_fields %}
-
-        <div class="row">
-            <div class="column medium-6 medium-offset-3">
-                <div class="content-block-text">
-
-                    <h2>{{ text.title }}</h2>
-                    <span class="caption">{{ text.caption }}</span>
-                    <p>{{ text.textarea }}</p>
-
-                    {% if loop.last %}
-
-                        {#TODO Add translations#}
-                        <a href="redkiwi" class="primary button"><span>NAAR REDKIWI</span></a>
-
-                    {% endif %}
+                    <span class="quote">{{ page.header.quote }}</span>
 
                 </div>
             </div>
         </div>
 
-    {% endfor %}
+    {% endif %}
 
-    <div class="row">
-        <div class="column medium-6 medium-offset-3">
-
-        </div>
-    </div>
+    {% include 'elements/content-block-text.html.twig' %}
 
 {% endblock %}

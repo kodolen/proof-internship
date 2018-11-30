@@ -1,11 +1,9 @@
-<div class="home-visual">
+{% if page.media %}
 
-    <img src="{{ page.media['lennart-zw.png'].url }}" alt=""/>
+    <div class="home-visual">
 
-    <div class="content">
-        <h2>FRONT END DEVELOPER</h2>
-        <span>STAGIAIR</span>
+        <img src="{{ page.media['lennart-zw.png'].url }}" alt=""/>
+
     </div>
 
-
-</div>
+{% endif %}

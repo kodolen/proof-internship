@@ -1,8 +1,11 @@
 .top-content {
 
-    width: 100%;
-    height: 60vh;
+    @include animation('800ms forwards 200ms appear');
+
     background: rgba(247, 247, 247, 0.5);
+    height: 60vh;
+    opacity: 0;
     padding-top: rem-calc(200);
+    width: 100%;
 
 }

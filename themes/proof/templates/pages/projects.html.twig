@@ -15,11 +15,9 @@
                 {% for p in page.find('/projecten').children if p != page %}
 
                     <div class="swiper-slide">
-
                         <div class="row">
                             <div class="column medium-6">
-
-                                <div class="content">
+                                <div class="content-slider">
 
                                     <h1>{{ p.header.title }}</h1>
 
@@ -35,16 +33,17 @@
                                     <a href="{{ p.url }}" class="primary button">Bekijk project</a>
 
                                 </div>
-
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="column">
+                                <div class="image-preview-holder">
 
-                        <div class="image-holder">
+                                    <img src="{{ (p.header.image|first).path }}" alt=""/>
 
-                            <img src="{{ (p.header.image|first).path }}" alt=""/>
-
+                                </div>
+                            </div>
                         </div>
-
                     </div>
 
                 {% endfor %}

@@ -1,48 +1,35 @@
 .home-visual {
 
-    height: 100vh;
-    width: 100%;
-    background: $blue;
+    @include animation('800ms forwards 200ms appear');
+
     align-items: center;
-    justify-content: center;
+    background: $blue;
     display: flex;
+    height: 100vh;
+    justify-content: center;
     position: relative;
-
-    .content {
-
-        width: auto;
-        text-align: center;
-        color: $white;
-        margin-bottom: rem-calc(60);
-        z-index: 1;
-
-        h2 {
-
-            @extend %sf-bold;
-
-            border-bottom: rem-calc(2) solid $white;
-            margin-bottom: rem-calc(16);
-
-        }
-
-        span {
-
-            @extend %sf-bold;
-
-            font-size: rem-calc(20);
-            letter-spacing: rem-calc(30);
-            margin-top: rem-calc(8);
-
-        }
-
-    }
+    width: 100%;
 
     img {
 
-        width: 35%;
-        position: absolute;
+        @include animation('800ms forwards 200ms appear');
+
         bottom: 0;
-        opacity: 0.3;
+        opacity: 0;
+        position: absolute;
+        width: 90%;
+
+        @include breakpoint(medium) {
+
+            width: 75%;
+
+        }
+
+        @include breakpoint(xlarge) {
+
+            width: 35%;
+
+        }
 
     }
 
