@@ -4618,7 +4618,7 @@ ol.list-upper-roman {
   font-family: "SourceSansProSemibold";
 }
 
-.header a, .caption, .quote {
+.header a, .link, .caption, .quote {
   font-family: "SourceSansProLight";
 }
 
@@ -4737,6 +4737,18 @@ a:hover {
   background-color: #4990E2;
   border: 0.125rem solid #4990E2;
   color: #FFFFFF;
+}
+
+.link {
+  font-size: 0.875rem;
+  color: #4990E2;
+  border-bottom: 1px solid #4990E2;
+  cursor: pointer;
+}
+@media print, screen and (min-width: 48em) {
+  .link {
+    font-size: 1rem;
+  }
 }
 
 /**
@@ -5601,7 +5613,7 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 .home-visual img {
-  animation: 800ms forwards 200ms appear;
+  animation: 3000ms forwards 200ms appear;
   bottom: 0;
   opacity: 0;
   position: absolute;
@@ -5637,13 +5649,33 @@ button.swiper-pagination-bullet {
 .content-block-text img {
   margin-top: 1.5rem;
 }
-.content-block-text .button-wrapper {
-  float: right;
-  width: auto;
-}
-.content-block-text .text-hidden {
-  display: none;
+.content-block-text .holder {
+  max-height: 100%;
   overflow: hidden;
+  position: relative;
+  transition: all ease 1s;
+}
+.content-block-text .holder.hidden {
+  max-height: 5rem;
+}
+.content-block-text .holder.hidden .overlay {
+  background-image: linear-gradient(-180deg, rgba(238, 238, 238, 0) 4%, #FFFFFF 81%);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  transition: all ease 1s;
+  visibility: visible;
+  width: 100%;
+}
+.content-block-text .holder .overlay {
+  opacity: 0;
+  transition: all ease 1s;
+  visibility: hidden;
+}
+.content-block-text .link {
+  float: right;
 }
 
 .quote-block {

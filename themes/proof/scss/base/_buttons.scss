@@ -49,3 +49,20 @@
     }
 
 }
+
+.link {
+
+    @extend %light;
+
+    font-size: rem-calc(14);
+    color: $blue;
+    border-bottom: 1px solid $blue;
+    cursor: pointer;
+
+    @include breakpoint(medium){
+
+        font-size: rem-calc(16);
+
+    }
+
+}

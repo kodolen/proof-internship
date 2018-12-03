@@ -10,7 +10,7 @@
 
             <div class="row">
                 <div class="column medium-4 medium-offset-4">
-                    <div class="content-block-text">
+                    <div class="content-block-text" data-accordion-holder>
                         <div class="row">
 
                             {% if text.image %}
@@ -37,28 +37,25 @@
 
                         </div>
 
-                        <div class="row">
-                            <div class="column medium-12">
+                        {% if text.preview %}
 
-                                <p>{{ text.textarea }}</p>
+                            <div class="row">
+                                <div class="column medium-12">
 
+                                    <p>{{ text.preview }}</p>
+
+                                    <p class="accordion-text hidden holder">
+                                        {{ text.textarea }}
+                                        <span class="overlay"></span>
+                                    </p>
+
+                                    <span class="link" data-accordion-button>Lees meer</span>
+
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="column medium-12 text-hidden">
+                        {% endif %}
 
-                                <p>{{ text.textarea }}</p>
-
-                            </div>
-                        </div>
-
-                        <div class="button-wrapper">
-
-                            <a href="{{ text.link }}" class="primary button">Website</a>
-                            <span class="secondary button">Lees meer</span>
-
-                        </div>
                     </div>
                 </div>
             </div>
@@ -67,16 +64,20 @@
 
     {% endif %}
 
-    <div class="summary-wrapper">
-        <div class="row">
-            <div class="column medium-10 medium-offset-1">
+    {% if page.header.summary and page.header.summary_title %}
 
-                <h2>{{ page.header.summary_title }}</h2>
-                <p>{{ page.header.summary }}</p>
+        <div class="summary-wrapper">
+            <div class="row">
+                <div class="column medium-8 medium-offset-2">
 
+                    <h2>{{ page.header.summary_title }}</h2>
+                    <p>{{ page.header.summary }}</p>
+
+                </div>
             </div>
         </div>
-    </div>
+
+    {% endif %}
 
     <div class="bottom-content">
         <div class="row">

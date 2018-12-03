@@ -3,6 +3,11 @@ const $body = $('body');
 let $menuToggle = $('.menu-toggle');
 let menuOpen = false;
 
+let $accordionButton = $('[data-accordion-button]');
+let $accordionText = $('[data-accordion-text]');
+let $accordionHolder = $('[data-accordion-holder]');
+let accordionOpen = false;
+
 $(document).ready(function () {
 
     //initialize swiper when document ready
@@ -80,6 +85,32 @@ $menuToggle.click(function () {
 
         $body.removeClass('menu-open');
         menuOpen = false;
+
+    }
+
+});
+
+$accordionButton.click(function (e) {
+    e.preventDefault();
+
+    let $this = $(this);
+    let $text = $this.prev('p');
+
+    console.log($text);
+
+    if ($text.hasClass('accordion-text')) {
+
+        console.log('open');
+        $text.removeClass('accordion-text');
+        $text.removeClass('hidden');
+
+    }
+
+    else {
+
+        console.log('close');
+        $text.addClass('accordion-text');
+        $text.addClass('hidden');
 
     }
 

@@ -12,7 +12,7 @@
 
     img {
 
-        @include animation('800ms forwards 200ms appear');
+        @include animation('3000ms forwards 200ms appear');
 
         bottom: 0;
         opacity: 0;

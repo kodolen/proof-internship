@@ -41,6 +41,9 @@ form:
                         header.summary_title:
                             type: text
                             label: Summary title
+                        header.summary_preview:
+                            type: text
+                            label: Summary preview
                         header.summary:
                             type: text
                             label: Summary
