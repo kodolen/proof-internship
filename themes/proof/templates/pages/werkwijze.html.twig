@@ -45,8 +45,11 @@
                                     <p>{{ text.preview }}</p>
 
                                     <p class="accordion-text hidden holder">
+
                                         {{ text.textarea }}
+
                                         <span class="overlay"></span>
+
                                     </p>
 
                                     <span class="link" data-accordion-button>Lees meer</span>
@@ -64,14 +67,25 @@
 
     {% endif %}
 
-    {% if page.header.summary and page.header.summary_title %}
+    {% if page.header.summary and page.header.summary_title and page.header.summary_preview %}
 
         <div class="summary-wrapper">
             <div class="row">
                 <div class="column medium-8 medium-offset-2">
 
                     <h2>{{ page.header.summary_title }}</h2>
-                    <p>{{ page.header.summary }}</p>
+
+                    <p> {{ page.header.summary_preview }} </p>
+
+                    <p class="accordion-text hidden holder">
+
+                        {{ page.header.summary }}
+
+                        <span class="overlay"></span>
+
+                    </p>
+
+                    <span class="link" data-accordion-button>Lees meer</span>
 
                 </div>
             </div>
