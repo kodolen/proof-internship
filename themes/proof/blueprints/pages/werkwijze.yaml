@@ -24,6 +24,10 @@ form:
                                 .caption:
                                     type: text
                                     label: Caption
+                                .preview:
+                                    type: text
+                                    max: 20
+                                    label: Preview
                                 .textarea:
                                     type: textarea
                                     label: textarea

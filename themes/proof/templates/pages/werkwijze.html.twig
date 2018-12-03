@@ -9,7 +9,7 @@
         {% for text in page.header.custom_text_fields %}
 
             <div class="row">
-                <div class="column medium-6 medium-offset-3">
+                <div class="column medium-4 medium-offset-4">
                     <div class="content-block-text">
                         <div class="row">
 
@@ -45,10 +45,18 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                            <div class="column medium-12 text-hidden">
+
+                                <p>{{ text.textarea }}</p>
+
+                            </div>
+                        </div>
+
                         <div class="button-wrapper">
 
                             <a href="{{ text.link }}" class="primary button">Website</a>
-                            <a href="#" class="secondary button">Lees meer</a>
+                            <span class="secondary button">Lees meer</span>
 
                         </div>
                     </div>

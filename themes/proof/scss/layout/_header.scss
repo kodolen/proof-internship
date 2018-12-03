@@ -13,7 +13,7 @@
     width: 60%;
     z-index: 20;
 
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
 
         background-color: transparent;
         opacity: 1;
