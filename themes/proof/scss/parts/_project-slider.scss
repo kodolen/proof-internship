@@ -24,13 +24,6 @@
     padding-top: rem-calc(100);
     position: relative;
 
-
-    h1 {
-
-        color: $white;
-
-    }
-
     p {
 
         padding-bottom: rem-calc(16);
@@ -38,11 +31,23 @@
 
     }
 
+    h1 {
+
+        color: $white;
+
+    }
+
+    .caption {
+
+        color: $orange;
+
+    }
+
 }
 
 .image-preview-holder {
 
-    bottom: rem-calc(40);
+    bottom: rem-calc(80);
     height: auto;
     left: 0;
     margin: auto;
@@ -57,7 +62,7 @@
 
         @include breakpoint(medium) {
 
-            width: 30%;
+            width: 35%;
 
         }
 

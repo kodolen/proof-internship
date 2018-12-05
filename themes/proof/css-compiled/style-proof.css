@@ -4614,7 +4614,7 @@ ol.list-upper-roman {
   font-family: "SourceSansProBold";
 }
 
-.main-nav ul li.selected > a, .button, .caption, h3, h2 {
+.main-nav ul li.selected > a, .button, .caption, h3 {
   font-family: "SourceSansProSemibold";
 }
 
@@ -4626,7 +4626,7 @@ p {
   font-family: "MontserratExtraLight";
 }
 
-.header .logo, .subtitle, h1 {
+.header .logo, .subtitle, h2, h1 {
   font-family: "SfProBold";
 }
 
@@ -5779,16 +5779,19 @@ button.swiper-pagination-bullet {
   padding-top: 6.25rem;
   position: relative;
 }
-.content-slider h1 {
-  color: #FFFFFF;
-}
 .content-slider p {
   padding-bottom: 1rem;
   color: #FFFFFF;
 }
+.content-slider h1 {
+  color: #FFFFFF;
+}
+.content-slider .caption {
+  color: #FFA200;
+}
 
 .image-preview-holder {
-  bottom: 2.5rem;
+  bottom: 5rem;
   height: auto;
   left: 0;
   margin: auto;
@@ -5802,7 +5805,7 @@ button.swiper-pagination-bullet {
 }
 @media print, screen and (min-width: 48em) {
   .image-preview-holder img {
-    width: 30%;
+    width: 35%;
   }
 }
 
