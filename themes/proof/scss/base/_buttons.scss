@@ -34,14 +34,14 @@
 
     &.secondary {
 
-        background-color: $white;
-        border: rem-calc(2) solid $blue;
-        color: $blue;
+        background-color: $orange;
+        border: rem-calc(2) solid $orange;
+        color: $white;
 
         &:hover {
 
-            background-color: $blue;
-            border: rem-calc(2) solid $blue;
+            background-color: $orange;
+            border: rem-calc(2) solid $orange;
             color: $white;
 
         }

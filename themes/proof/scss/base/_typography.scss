@@ -117,14 +117,17 @@
 
 h1 {
 
-    @extend %semi-bold;
+    @extend %sf-bold;
 
-    font-size: rem-calc(40);
+    font-size: rem-calc(32);
+    line-height: rem-calc(30);
+    margin: 0;
     text-transform: uppercase;
 
     @include breakpoint(medium) {
 
         font-size: rem-calc(52);
+        line-height: rem-calc(50);
 
     }
 
@@ -169,7 +172,7 @@ p {
     @extend %extra-light;
 
     font-size: rem-calc(12);
-    line-height: rem-calc(26);
+    line-height: rem-calc(20);
 
     @include breakpoint(medium) {
 
@@ -194,22 +197,44 @@ p {
 
     }
 
+    &:before,
+    &:after {
+
+        content: '"';
+
+    }
+
 }
 
 .caption {
 
-    @extend %light;
+    @extend %semi-bold;
 
+    color: $orange;
     font-size: rem-calc(14);
     text-transform: uppercase;
-    color: $blue;
 
-    @include breakpoint(medium){
+    @include breakpoint(medium) {
 
         font-size: rem-calc(16);
 
     }
 
+}
+
+.subtitle {
+
+    @extend %sf-bold;
+
+    font-size: rem-calc(16);
+    line-height: rem-calc(4);
+
+    @include breakpoint(medium) {
+
+        font-size: rem-calc(30);
+        line-height: rem-calc(10);
+
+    }
 
 }
 

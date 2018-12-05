@@ -4614,11 +4614,11 @@ ol.list-upper-roman {
   font-family: "SourceSansProBold";
 }
 
-.main-nav ul li.selected > a, .button, h3, h2, h1 {
+.main-nav ul li.selected > a, .button, .caption, h3, h2 {
   font-family: "SourceSansProSemibold";
 }
 
-.header a, .link, .caption, .quote {
+.header a, .link, .quote {
   font-family: "SourceSansProLight";
 }
 
@@ -4626,17 +4626,20 @@ p {
   font-family: "MontserratExtraLight";
 }
 
-.header .logo {
+.header .logo, .subtitle, h1 {
   font-family: "SfProBold";
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  line-height: 1.875rem;
+  margin: 0;
   text-transform: uppercase;
 }
 @media print, screen and (min-width: 48em) {
   h1 {
     font-size: 3.25rem;
+    line-height: 3.125rem;
   }
 }
 
@@ -4665,7 +4668,7 @@ h3 {
 
 p {
   font-size: 0.75rem;
-  line-height: 1.625rem;
+  line-height: 1.25rem;
 }
 @media print, screen and (min-width: 48em) {
   p {
@@ -4684,15 +4687,29 @@ p {
     line-height: 3.125rem;
   }
 }
+.quote:before, .quote:after {
+  content: '"';
+}
 
 .caption {
+  color: #FFA200;
   font-size: 0.875rem;
   text-transform: uppercase;
-  color: #4990E2;
 }
 @media print, screen and (min-width: 48em) {
   .caption {
     font-size: 1rem;
+  }
+}
+
+.subtitle {
+  font-size: 1rem;
+  line-height: 0.25rem;
+}
+@media print, screen and (min-width: 48em) {
+  .subtitle {
+    font-size: 1.875rem;
+    line-height: 0.625rem;
   }
 }
 
@@ -4719,30 +4736,30 @@ a:hover {
   }
 }
 .button.primary {
-  background-color: #4990E2;
-  border: 0.125rem solid #4990E2;
+  background-color: #779BB1;
+  border: 0.125rem solid #779BB1;
   color: #FFFFFF;
 }
 .button.primary:hover {
   background-color: #FFFFFF;
-  border: 0.125rem solid #4990E2;
-  color: #4990E2;
+  border: 0.125rem solid #779BB1;
+  color: #779BB1;
 }
 .button.secondary {
-  background-color: #FFFFFF;
-  border: 0.125rem solid #4990E2;
-  color: #4990E2;
+  background-color: #FFA200;
+  border: 0.125rem solid #FFA200;
+  color: #FFFFFF;
 }
 .button.secondary:hover {
-  background-color: #4990E2;
-  border: 0.125rem solid #4990E2;
+  background-color: #FFA200;
+  border: 0.125rem solid #FFA200;
   color: #FFFFFF;
 }
 
 .link {
   font-size: 0.875rem;
-  color: #4990E2;
-  border-bottom: 1px solid #4990E2;
+  color: #779BB1;
+  border-bottom: 1px solid #779BB1;
   cursor: pointer;
 }
 @media print, screen and (min-width: 48em) {
@@ -5473,7 +5490,7 @@ button.swiper-pagination-bullet {
 }
 
 .header {
-  background-color: #4990E2;
+  background-color: #779BB1;
   color: #FFFFFF;
   height: auto;
   opacity: 0;
@@ -5576,12 +5593,12 @@ button.swiper-pagination-bullet {
 
 @media print, screen and (min-width: 48em) {
   .changeColor .main-nav a {
-    color: #4990E2;
+    color: #779BB1;
   }
 }
 
 .footer {
-  background-color: #2A5484;
+  background-color: #3D718D;
   padding: 0.5rem;
 }
 @media print, screen and (min-width: 48em) {
@@ -5603,31 +5620,63 @@ button.swiper-pagination-bullet {
 }
 
 .home-visual {
-  animation: 800ms forwards 200ms appear;
-  align-items: center;
-  background: #4990E2;
-  display: flex;
+  background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
   height: 100vh;
-  justify-content: center;
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
-.home-visual img {
-  animation: 3000ms forwards 200ms appear;
-  bottom: 0;
-  opacity: 0;
-  position: absolute;
-  width: 90%;
+.home-visual .landing-holder {
+  display: flex;
+  height: 100%;
+  width: auto;
+}
+.home-visual .landing-holder .landings-text {
+  align-self: center;
+  color: #FFFFFF;
+  text-align: left;
+  width: auto;
+  z-index: 2;
+}
+.home-visual .landing-holder .landings-text h1 {
+  margin-top: -0.5rem;
+}
+.home-visual .landing-holder .landings-text p {
+  width: 80%;
+  padding-bottom: 0.5rem;
 }
 @media print, screen and (min-width: 48em) {
-  .home-visual img {
-    width: 75%;
+  .home-visual .landing-holder .landings-text p {
+    padding-bottom: 1rem;
   }
 }
-@media screen and (min-width: 75em) {
-  .home-visual img {
-    width: 35%;
+.home-visual .landing-holder .landings-text .subtitle {
+  margin-bottom: 6.25rem;
+}
+.home-visual .landing-holder .landing-image {
+  align-self: flex-end;
+  position: absolute;
+  width: 100%;
+  right: -6.25rem;
+}
+@media print, screen and (min-width: 48em) {
+  .home-visual .landing-holder .landing-image {
+    right: -12.5rem;
+    width: 85%;
   }
+}
+@media print, screen and (min-width: 64em) {
+  .home-visual .landing-holder .landing-image {
+    width: 100%;
+    right: 0;
+    position: relative;
+  }
+}
+.home-visual .landing-holder .landing-image img {
+  align-self: center;
+  opacity: 0.3;
+  width: 100%;
+  z-index: 1;
 }
 
 .content-block-text {
@@ -5669,11 +5718,21 @@ button.swiper-pagination-bullet {
 
 .top-content {
   animation: 800ms forwards 200ms appear;
-  background: rgba(247, 247, 247, 0.5);
-  height: 60vh;
+  background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
+  color: #FFFFFF;
   opacity: 0;
-  padding-top: 12.5rem;
+  padding: 6.25rem 0;
   width: 100%;
+}
+@media print, screen and (min-width: 48em) {
+  .top-content {
+    padding: 11.25rem 0;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .top-content {
+    padding: 12.5rem 0;
+  }
 }
 
 .summary-wrapper {
@@ -5685,7 +5744,7 @@ button.swiper-pagination-bullet {
 
 .bottom-content {
   width: 100%;
-  background-color: #4990E2;
+  background-color: #779BB1;
   padding: 1.5rem 0;
 }
 .bottom-content .caption {
@@ -5701,7 +5760,7 @@ button.swiper-pagination-bullet {
 }
 
 .project-bg {
-  background: rgba(247, 247, 247, 0.8);
+  background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
   height: 80vh;
   position: absolute;
   width: 100%;
@@ -5721,10 +5780,11 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 .content-slider h1 {
-  margin-bottom: -1rem;
+  color: #FFFFFF;
 }
 .content-slider p {
   padding-bottom: 1rem;
+  color: #FFFFFF;
 }
 
 .image-preview-holder {
@@ -5858,7 +5918,7 @@ button.swiper-pagination-bullet {
 }
 
 .changeColor .hamburger span {
-  background: #4990E2;
+  background: linear-gradient(0deg, rgba(46, 70, 104, 0.39) 0%, #5BADDE 100%);
 }
 
 @keyframes appear {

@@ -52,13 +52,7 @@ $window.on('scroll', function () {
 
     }
 
-});
-
-$window.on('scroll', function () {
-
-    let scrollTop = $window.scrollTop();
-
-    if (scrollTop > $('.home-visual').height() - 50 ) {
+    if (scrollTop > $('.home-visual').height() - 50) {
 
         $body.addClass(('changeColor'));
 

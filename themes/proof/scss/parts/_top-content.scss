@@ -2,10 +2,22 @@
 
     @include animation('800ms forwards 200ms appear');
 
-    background: rgba(247, 247, 247, 0.5);
-    height: 60vh;
+    background: $blue-gradient;
+    color: $white;
     opacity: 0;
-    padding-top: rem-calc(200);
+    padding: rem-calc(100 0);
     width: 100%;
+
+    @include breakpoint(medium) {
+
+        padding: rem-calc(180 0);
+
+    }
+
+    @include breakpoint(large) {
+
+        padding: rem-calc(200 0);
+
+    }
 
 }

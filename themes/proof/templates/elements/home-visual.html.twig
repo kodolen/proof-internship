@@ -1,9 +1,31 @@
 {% if page.media %}
 
     <div class="home-visual">
+        <div class="landing-holder">
+            <div class="row">
+                <div class="column medium-9 medium-offset-1 large-5 large-offset-1 landings-text">
 
-        <img src="{{ page.media['lennart-zw.png'].url }}" alt=""/>
+                    {#TODO get from backed#}
+                    <span class="subtitle">STAGIAIR</span>
+                    <h1>FRONT END DEVELOPER</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip
+                        ex ea commodo consequat.
+                    </p>
 
+                    <a href="#" class="button secondary">Lees meer</a>
+
+                </div>
+                <div class="column large-4 large-offset-1 landing-image">
+
+                    <img src="{{ page.media['lennart-zw.png'].url }}" alt=""/>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 {% endif %}

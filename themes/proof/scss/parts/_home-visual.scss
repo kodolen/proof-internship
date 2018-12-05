@@ -1,37 +1,85 @@
 .home-visual {
 
-    @include animation('800ms forwards 200ms appear');
-
-    align-items: center;
-    background: $blue;
-    display: flex;
+    background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
     height: 100vh;
-    justify-content: center;
     position: relative;
     width: 100%;
+    overflow: hidden;
 
-    img {
+    .landing-holder {
 
-        @include animation('3000ms forwards 200ms appear');
+        display: flex;
+        height: 100%;
+        width: auto;
 
-        bottom: 0;
-        opacity: 0;
-        position: absolute;
-        width: 90%;
+        .landings-text {
 
-        @include breakpoint(medium) {
+            align-self: center;
+            color: $white;
+            text-align: left;
+            width: auto;
+            z-index: 2;
 
-            width: 75%;
+            h1 {
+
+                margin-top: rem-calc(-8);
+
+            }
+
+            p {
+                width: 80%;
+                padding-bottom: rem-calc(8);
+
+                @include breakpoint(medium) {
+
+                    padding-bottom: rem-calc(16);
+
+                }
+
+            }
+
+            .subtitle {
+
+                margin-bottom: rem-calc(100);
+
+            }
 
         }
 
-        @include breakpoint(xlarge) {
+        .landing-image {
 
-            width: 35%;
+            align-self: flex-end;
+            position: absolute;
+            width: 100%;
+            right: rem-calc(-100);
+
+            @include breakpoint(medium) {
+
+                right: rem-calc(-200);
+                width: 85%;
+
+            }
+
+
+            @include breakpoint(large) {
+
+                width: 100%;
+                right: 0;
+                position: relative;
+
+            }
+
+            img {
+
+                align-self: center;
+                opacity: 0.3;
+                width: 100%;
+                z-index: 1;
+
+            }
 
         }
 
     }
 
 }
-

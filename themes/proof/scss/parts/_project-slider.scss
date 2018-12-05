@@ -1,6 +1,6 @@
 .project-bg {
 
-    background: rgba(247, 247, 247, 0.8);
+    background: $blue-gradient;
     height: 80vh;
     position: absolute;
     width: 100%;
@@ -24,15 +24,17 @@
     padding-top: rem-calc(100);
     position: relative;
 
+
     h1 {
 
-        margin-bottom: rem-calc(-16);
+        color: $white;
 
     }
 
     p {
 
         padding-bottom: rem-calc(16);
+        color: $white;
 
     }
 
