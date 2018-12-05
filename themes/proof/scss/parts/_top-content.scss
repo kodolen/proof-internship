@@ -4,7 +4,7 @@
 
     background: $blue-gradient;
     color: $white;
-    opacity: 0;
+    height: 40vh;
     padding: rem-calc(100 0);
     width: 100%;
 
@@ -16,7 +16,7 @@
 
     @include breakpoint(large) {
 
-        padding: rem-calc(180 0);
+        padding: rem-calc(180 0 0);
 
     }
 

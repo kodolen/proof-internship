@@ -5720,7 +5720,7 @@ button.swiper-pagination-bullet {
   animation: 800ms forwards 200ms appear;
   background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
   color: #FFFFFF;
-  opacity: 0;
+  height: 40vh;
   padding: 6.25rem 0;
   width: 100%;
 }
@@ -5731,7 +5731,7 @@ button.swiper-pagination-bullet {
 }
 @media print, screen and (min-width: 64em) {
   .top-content {
-    padding: 11.25rem 0;
+    padding: 11.25rem 0 0;
   }
 }
 
@@ -5759,20 +5759,11 @@ button.swiper-pagination-bullet {
   margin: 0 2.5rem;
 }
 
-.project-bg {
-  background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
-  height: 80vh;
-  position: absolute;
-  width: 100%;
-  z-index: -20;
-}
-
 .swiper-content {
   position: relative;
 }
 
 .content-slider {
-  padding-top: 6.25rem;
   position: relative;
 }
 .content-slider p {
