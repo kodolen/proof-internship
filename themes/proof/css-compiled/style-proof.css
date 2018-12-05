@@ -5726,12 +5726,12 @@ button.swiper-pagination-bullet {
 }
 @media print, screen and (min-width: 48em) {
   .top-content {
-    padding: 11.25rem 0;
+    padding: 7.5rem 0;
   }
 }
 @media print, screen and (min-width: 64em) {
   .top-content {
-    padding: 12.5rem 0;
+    padding: 11.25rem 0;
   }
 }
 
@@ -5767,10 +5767,6 @@ button.swiper-pagination-bullet {
   z-index: -20;
 }
 
-.project-preview-wrapper {
-  height: 100vh;
-}
-
 .swiper-content {
   position: relative;
 }
@@ -5791,7 +5787,7 @@ button.swiper-pagination-bullet {
 }
 
 .image-preview-holder {
-  bottom: 5rem;
+  bottom: 2.5rem;
   height: auto;
   left: 0;
   margin: auto;

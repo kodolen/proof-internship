@@ -1,9 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-
-    <div class="project-bg"></div>
-
     <div class="swiper-content">
 
         <!-- Slider main container -->
@@ -15,22 +12,25 @@
                 {% for p in page.find('/projecten').children if p != page %}
 
                     <div class="swiper-slide">
-                        <div class="row">
-                            <div class="column medium-4 medium-offset-1">
-                                <div class="content-slider">
+                        <div class="top-content">
+                            <div class="row">
+                                <div class="column medium-4 medium-offset-1">
+                                    <div class="content-slider">
 
-                                    <h1>{{ p.header.title }}</h1>
 
-                                    {#{% for q in p.header.qualifications %}#}
+                                        <h1>{{ p.header.title }}</h1>
+
+                                        {#{% for q in p.header.qualifications %}#}
 
                                         {#<span class="caption">{{ q.qualification }}</span>#}
 
-                                    {#{% endfor %}#}
+                                        {#{% endfor %}#}
 
-                                    <p>{{ p.header.intro }}</p>
+                                        <p>{{ p.header.intro }}</p>
 
-                                    {#TODO Add translation#}
-                                    <a href="{{ p.url }}" class="secondary button">Bekijk project</a>
+                                        {#TODO Add translation#}
+                                        <a href="{{ p.url }}" class="secondary button">Bekijk project</a>
+                                    </div>
 
                                 </div>
                             </div>
@@ -57,7 +57,6 @@
             <div class="swiper-button-next"></div>
 
         </div>
-
     </div>
 
 {% endblock %}
