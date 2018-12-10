@@ -4951,7 +4951,7 @@ a:hover {
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 70%;
+  top: 80%;
   width: 27px;
   height: 44px;
   margin-top: -22px;
@@ -5026,7 +5026,6 @@ a:hover {
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 10px;
   left: 0;
   width: 100%;
 }
@@ -5718,18 +5717,24 @@ button.swiper-pagination-bullet {
 }
 
 .top-content .content-wrapper {
-  display: flex;
-  align-items: center;
   animation: 800ms forwards 200ms appear;
+  align-items: center;
   background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
   color: #FFFFFF;
+  display: flex;
   height: 100vh;
   width: 100%;
 }
 .top-content .content-wrapper h1 {
   color: #FFFFFF;
-  font-size: 6.25rem;
-  line-height: 5.625rem;
+  font-size: 2.5rem;
+  line-height: 2rem;
+}
+@media print, screen and (min-width: 48em) {
+  .top-content .content-wrapper h1 {
+    font-size: 6.25rem;
+    line-height: 5.625rem;
+  }
 }
 .top-content .content-wrapper p {
   margin-bottom: 2rem;
@@ -5759,58 +5764,44 @@ button.swiper-pagination-bullet {
   margin: 0 2.5rem;
 }
 
+.content-left {
+  align-items: center;
+  background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
+  color: #FFFFFF;
+  display: flex;
+  float: left;
+  height: 100%;
+  justify-content: center;
+  padding: 0 6.25rem;
+  width: 25%;
+}
+
+.content-right {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+}
+.content-right .swiper-button-prev,
+.content-right .swiper-button-next {
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.content-right .swiper-pagination {
+  transform: rotate(90deg);
+  bottom: auto;
+  right: 1.25rem;
+}
+.content-right .swiper-pagination .swiper-pagination-bullet {
+  background-color: #FFA200;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0.625rem;
+}
+
 .project-bg {
   height: 100vh;
-  width: 100%;
-}
-.project-bg .top-content {
-  height: 60vh;
-  background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
-}
-
-.swiper-content {
-  position: relative;
-}
-.swiper-content h1 {
-  font-size: 3.125rem;
-  line-height: 3.125rem;
-}
-
-.content-slider {
-  position: relative;
-}
-.content-slider p {
-  padding-bottom: 1rem;
-  color: #FFFFFF;
-}
-.content-slider .caption {
-  color: #FFA200;
-}
-.content-slider .top-content {
-  background-color: whitesmoke;
-}
-
-.image-preview-holder {
-  bottom: 5rem;
-  height: 40vh;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-}
-.image-preview-holder img {
-  display: block;
-  margin: auto;
-  width: 100%;
-}
-@media print, screen and (min-width: 48em) {
-  .image-preview-holder img {
-    width: 35%;
-  }
-}
-
-.intro-content {
-  margin-top: 12.5rem;
 }
 
 .intro-content {

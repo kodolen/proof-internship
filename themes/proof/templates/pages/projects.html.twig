@@ -2,65 +2,54 @@
 
 {% block content %}
 
-    <div class="project-bg">
-        <div class="swiper-content">
+    <div class="swiper-content">
 
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
 
-            <!-- Slider main container -->
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
+                <!-- Slides -->
+                {% for p in page.find('/projecten').children if p != page %}
 
-                    <!-- Slides -->
-                    {% for p in page.find('/projecten').children if p != page %}
+                    <div class="swiper-slide">
+                        <div class="content-left">
+                            <div class="content-holder">
 
-                        <div class="swiper-slide">
-                            <div class="top-content">
-                                <div class="row">
-                                    <div class="column medium-4 medium-offset-1">
+                                <h1>{{ p.header.title }}</h1>
 
+                                {#{% for q in p.header.qualifications %}#}
 
-                                        <h1>{{ p.header.title }}</h1>
+                                {#<span class="caption">{{ q.qualification }}</span>#}
 
-                                        {#{% for q in p.header.qualifications %}#}
+                                {#{% endfor %}#}
 
-                                        {#<span class="caption">{{ q.qualification }}</span>#}
+                                <p>{{ p.header.intro }}</p>
 
-                                        {#{% endfor %}#}
+                                {#TODO Add translation#}
+                                <a href="{{ p.url }}" class="secondary button">Bekijk project</a>
 
-                                        <p>{{ p.header.intro }}</p>
-
-                                        {#TODO Add translation#}
-                                        <a href="{{ p.url }}" class="secondary button">Bekijk project</a>
-
-
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="column">
-                                        <div class="image-preview-holder">
-
-                                            <img src="{{ (p.header.image|first).path }}" alt=""/>
-
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                        <div class="content-right">
 
-                    {% endfor %}
+                            <img src="{{ (p.header.image|first).path }}" alt=""/>
 
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
 
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                        </div>
+                    </div>
+
+                {% endfor %}
 
             </div>
         </div>
     </div>
+
 
 {% endblock %}

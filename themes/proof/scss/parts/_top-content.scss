@@ -2,27 +2,33 @@
 
     .content-wrapper {
 
-        display: flex;
-        align-items: center;
-
         @include animation('800ms forwards 200ms appear');
 
+        align-items: center;
         background: $blue-gradient;
         color: $white;
+        display: flex;
         height: 100vh;
         width: 100%;
 
         h1 {
 
             color: $white;
-            font-size: rem-calc(100);
-            line-height: rem-calc(90);
+            font-size: rem-calc(40);
+            line-height: rem-calc(32);
+
+            @include breakpoint(medium) {
+
+                font-size: rem-calc(100);
+                line-height: rem-calc(90);
+
+            }
 
         }
 
         p {
 
-            margin-bottom: rem-calc(32) ;
+            margin-bottom: rem-calc(32);
 
         }
 

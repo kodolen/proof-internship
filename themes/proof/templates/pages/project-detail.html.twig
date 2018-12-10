@@ -2,38 +2,30 @@
 
 {% block content %}
 
-    {#<div class="project-bg"></div>#}
-    <div class="project-bq">
-        <div class="project-preview-wrapper">
-            <div class="top-content">
-                <div class="row">
-                    <div class="column medium-4 medium-offset-1">
+    <div class="project-bg">
 
-                        <h1>{{ page.header.title }}</h1>
+        <div class="content-left">
+            <div class="content-holder">
 
-                        {#{% for q in page.header.qualifications %}#}
+                <h1>{{ page.header.title }}</h1>
 
-                        {#<span class="caption">{{ q.qualification }}</span>#}
+                {#{% for q in page.header.qualifications %}#}
 
-                        {#{% endfor %}#}
+                    {#<span class="caption">{{ q.qualification }}</span>#}
 
-                        <p>{{ page.header.intro }}</p>
+                {#{% endfor %}#}
 
-                    </div>
-                </div>
+                <p>{{ page.header.intro }}</p>
+
             </div>
         </div>
+        <div class="content-right">
 
-        <div class="row">
-            <div class="column">
-                <div class="image-preview-holder">
+            <img src="../{{ (page.header.image|first).path }}" alt=""/>
 
-                    <img src="../{{ (page.header.image|first).path }}" alt=""/>
-
-                </div>
-            </div>
         </div>
     </div>
+
 
     {% if page.header.content_intro %}
 

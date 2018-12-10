@@ -12,14 +12,14 @@ $(document).ready(function () {
 
     //initialize swiper when document ready
     var swiper = new Swiper('.swiper-container', {
-        autoplay: 5000,
-        allowTouchMove: true,
-        parallax: true,
+        slidesPerView: 1,
         speed: 1000,
+        effect: 'fade',
+        mousewheel: true,
         pagination: {
             el: '.swiper-pagination',
-            type: 'bullets',
             clickable: true,
+            progressbarOpposite: false,
         },
         navigation: {
             nextEl: '.swiper-button-next',
