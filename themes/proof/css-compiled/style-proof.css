@@ -5598,7 +5598,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer {
-  background-color: #3D718D;
+  background-color: #FFA200;
   padding: 0.5rem;
 }
 @media print, screen and (min-width: 48em) {
@@ -5720,9 +5720,14 @@ button.swiper-pagination-bullet {
   animation: 800ms forwards 200ms appear;
   background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
   color: #FFFFFF;
-  height: 40vh;
+  height: 80vh;
   padding: 6.25rem 0;
   width: 100%;
+}
+.top-content h1 {
+  color: #FFFFFF;
+  font-size: 6.25rem;
+  line-height: 5.625rem;
 }
 @media print, screen and (min-width: 48em) {
   .top-content {
@@ -5759,8 +5764,21 @@ button.swiper-pagination-bullet {
   margin: 0 2.5rem;
 }
 
+.project-bg {
+  height: 100vh;
+  width: 100%;
+}
+.project-bg .top-content {
+  height: 60vh;
+  background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
+}
+
 .swiper-content {
   position: relative;
+}
+.swiper-content h1 {
+  font-size: 3.125rem;
+  line-height: 3.125rem;
 }
 
 .content-slider {
@@ -5770,16 +5788,16 @@ button.swiper-pagination-bullet {
   padding-bottom: 1rem;
   color: #FFFFFF;
 }
-.content-slider h1 {
-  color: #FFFFFF;
-}
 .content-slider .caption {
   color: #FFA200;
 }
+.content-slider .top-content {
+  background-color: whitesmoke;
+}
 
 .image-preview-holder {
-  bottom: 2.5rem;
-  height: auto;
+  bottom: 5rem;
+  height: 40vh;
   left: 0;
   margin: auto;
   position: absolute;
@@ -5794,6 +5812,10 @@ button.swiper-pagination-bullet {
   .image-preview-holder img {
     width: 35%;
   }
+}
+
+.intro-content {
+  margin-top: 12.5rem;
 }
 
 .intro-content {

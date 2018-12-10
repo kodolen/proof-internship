@@ -1,21 +1,23 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    <div class="swiper-content">
 
-        <!-- Slider main container -->
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+    <div class="project-bg">
+        <div class="swiper-content">
 
-                <!-- Slides -->
-                {% for p in page.find('/projecten').children if p != page %}
 
-                    <div class="swiper-slide">
-                        <div class="top-content">
-                            <div class="row">
-                                <div class="column medium-4 medium-offset-1">
-                                    <div class="content-slider">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+
+                    <!-- Slides -->
+                    {% for p in page.find('/projecten').children if p != page %}
+
+                        <div class="swiper-slide">
+                            <div class="top-content">
+                                <div class="row">
+                                    <div class="column medium-4 medium-offset-1">
 
 
                                         <h1>{{ p.header.title }}</h1>
@@ -30,32 +32,34 @@
 
                                         {#TODO Add translation#}
                                         <a href="{{ p.url }}" class="secondary button">Bekijk project</a>
+
+
                                     </div>
+                                </div>
 
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="image-preview-holder">
+
+                                            <img src="{{ (p.header.image|first).path }}" alt=""/>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="column">
-                                <div class="image-preview-holder">
 
-                                    <img src="{{ (p.header.image|first).path }}" alt=""/>
+                    {% endfor %}
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-                {% endfor %}
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
         </div>
     </div>
 

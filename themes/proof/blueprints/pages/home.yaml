@@ -12,6 +12,15 @@ form:
             fields:
                 content:
                     fields:
+                        header.intro_subtitle:
+                            type: text
+                            label: Subtitel
+                        header.intro_title:
+                            type: text
+                            label: Titel
+                        header.intro_text:
+                            type: textarea
+                            label: Tekst
                         header.quote:
                             type: text
                             label: Additional Quote
@@ -19,7 +28,7 @@ form:
                             name: fields
                             type: list
                             style: vertical
-                            label: fields
+                            label: Velden
                             fields:
                                 .title:
                                     type: text

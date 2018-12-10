@@ -1,16 +1,27 @@
-//.project-bg {
-//
-//    background: $blue-gradient;
-//    height: 80vh;
-//    position: absolute;
-//    width: 100%;
-//    z-index: -20;
-//
-//}
+.project-bg {
+
+    height: 100vh;
+    width: 100%;
+
+    .top-content {
+
+        height: 60vh;
+        background: $blue-gradient;
+
+    }
+
+}
 
 .swiper-content {
 
     position: relative;
+
+    h1 {
+
+        font-size: rem-calc(50);
+        line-height: rem-calc(50);
+
+    }
 
 }
 
@@ -25,11 +36,6 @@
 
     }
 
-    h1 {
-
-        color: $white;
-
-    }
 
     .caption {
 
@@ -37,12 +43,18 @@
 
     }
 
+    .top-content {
+
+        background-color: whitesmoke;
+
+    }
+
 }
 
 .image-preview-holder {
 
-    bottom: rem-calc(40);
-    height: auto;
+    bottom: rem-calc(80);
+    height: 40vh;
     left: 0;
     margin: auto;
     position: absolute;
@@ -61,5 +73,11 @@
         }
 
     }
+
+}
+
+.intro-content {
+
+    margin-top: rem-calc(200);
 
 }

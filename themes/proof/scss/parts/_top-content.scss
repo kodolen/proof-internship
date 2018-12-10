@@ -4,9 +4,18 @@
 
     background: $blue-gradient;
     color: $white;
-    height: 40vh;
+    height: 80vh;
     padding: rem-calc(100 0);
     width: 100%;
+
+    h1 {
+
+        color: $white;
+        font-size: rem-calc(100);
+        line-height: rem-calc(90);
+
+
+    }
 
     @include breakpoint(medium) {
 
