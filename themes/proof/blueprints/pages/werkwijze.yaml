@@ -12,6 +12,9 @@ form:
             fields:
                 content:
                     fields:
+                        header.intro_title:
+                            type: text
+                            label: intro Titel
                         header.custom_text_fields:
                             name: fields
                             type: list
