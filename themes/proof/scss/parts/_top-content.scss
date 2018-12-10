@@ -1,31 +1,30 @@
 .top-content {
 
-    @include animation('800ms forwards 200ms appear');
+    .content-wrapper {
 
-    background: $blue-gradient;
-    color: $white;
-    height: 80vh;
-    padding: rem-calc(100 0);
-    width: 100%;
+        display: flex;
+        align-items: center;
 
-    h1 {
+        @include animation('800ms forwards 200ms appear');
 
+        background: $blue-gradient;
         color: $white;
-        font-size: rem-calc(100);
-        line-height: rem-calc(90);
+        height: 100vh;
+        width: 100%;
 
+        h1 {
 
-    }
+            color: $white;
+            font-size: rem-calc(100);
+            line-height: rem-calc(90);
 
-    @include breakpoint(medium) {
+        }
 
-        padding: rem-calc(120 0);
+        p {
 
-    }
+            margin-bottom: rem-calc(32) ;
 
-    @include breakpoint(large) {
-
-        padding: rem-calc(180 0 0);
+        }
 
     }
 

@@ -5717,28 +5717,22 @@ button.swiper-pagination-bullet {
   }
 }
 
-.top-content {
+.top-content .content-wrapper {
+  display: flex;
+  align-items: center;
   animation: 800ms forwards 200ms appear;
   background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
   color: #FFFFFF;
-  height: 80vh;
-  padding: 6.25rem 0;
+  height: 100vh;
   width: 100%;
 }
-.top-content h1 {
+.top-content .content-wrapper h1 {
   color: #FFFFFF;
   font-size: 6.25rem;
   line-height: 5.625rem;
 }
-@media print, screen and (min-width: 48em) {
-  .top-content {
-    padding: 7.5rem 0;
-  }
-}
-@media print, screen and (min-width: 64em) {
-  .top-content {
-    padding: 11.25rem 0 0;
-  }
+.top-content .content-wrapper p {
+  margin-bottom: 2rem;
 }
 
 .summary-wrapper {

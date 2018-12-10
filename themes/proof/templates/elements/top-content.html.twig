@@ -2,22 +2,24 @@
 
     <div class="top-content">
         <div class="row">
-            <div class="column small-10 small-offset-1 medium-6 medium-offset-1 large-4 large-offset-1">
+            <div class="content-wrapper">
+                <div class="column small-10 small-offset-1 medium-6 medium-offset-1 large-5 large-offset-1">
 
-                {% if page.header.intro_title %}
+                    {% if page.header.intro_title %}
 
-                    <h1>{{ page.header.intro_title }}</h1>
+                        <h1>{{ page.header.intro_title }}</h1>
 
-                {% endif %}
+                    {% endif %}
 
-                {% if page.content %}
+                    {% if page.content %}
 
-                    <p>{{ page.content }}</p>
+                        <p>{{ page.content }}</p>
 
-                {% endif %}
+                    {% endif %}
 
-                <a href="#" class="secondary button">Lees meer</a>
+                    <a href="#" class="secondary button">Lees meer</a>
 
+                </div>
             </div>
         </div>
     </div>
