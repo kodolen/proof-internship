@@ -6,15 +6,24 @@
                 <div class="column medium-9 medium-offset-1 large-5 large-offset-1 landings-text">
 
                     {#TODO get from backed#}
-                    <span class="subtitle">STAGIAIR</span>
-                    <h1>FRONT END DEVELOPER</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip
-                        ex ea commodo consequat.
-                    </p>
+
+                    {% if page.header.intro_subtitle %}
+
+                        <span class="subtitle">{{ page.header.intro_subtitle }}</span>
+
+                    {% endif %}
+
+                    {% if page.header.intro_title %}
+
+                        <h1>{{ page.header.intro_title }}</h1>
+
+                    {% endif %}
+
+                    {% if page.header.intro_text %}
+
+                        <p>{{ page.header.intro_text }}</p>
+
+                    {% endif %}
 
                     <a href="#" class="button secondary">Lees meer</a>
 

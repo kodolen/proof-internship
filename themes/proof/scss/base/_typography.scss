@@ -228,6 +228,7 @@ p {
 
     font-size: rem-calc(16);
     line-height: rem-calc(4);
+    text-transform: uppercase;
 
     @include breakpoint(medium) {
 
