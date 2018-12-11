@@ -15,6 +15,9 @@ $(document).ready(function () {
         slidesPerView: 1,
         speed: 1000,
         effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
         mousewheel: true,
         pagination: {
             el: '.swiper-pagination',
@@ -27,9 +30,10 @@ $(document).ready(function () {
         },
     });
 
-    $(function() {
+    $(function () {
         $('html, body').animate({
-            scrollTop: $('.intro-content').offset().top}, 1000);
+            scrollTop: $('.intro-content').offset().top
+        }, 1000);
     });
 
     //Accordions
@@ -80,7 +84,17 @@ $(document).ready(function () {
 
         if (scrollTop > $('.home-visual').height() - 50) {
 
-            $body.addClass(('changeColor'));
+            if (scrollTop > $('.top-content').height() - 50) {
+
+                $body.addClass(('changeColor'));
+
+            }
+
+            else {
+
+                $body.removeClass('changeColor');
+
+            }
 
         }
 
@@ -91,6 +105,19 @@ $(document).ready(function () {
         }
 
     });
+
+    //check with page you are
+    if (location.href === "http://localhost:8000/projecten") {
+
+        $body.addClass(('changeColor'));
+
+    }
+
+    else {
+
+        $body.removeClass('changeColor');
+
+    }
 
     //Opens and closes hamburger menu
     $menuToggle.click(function () {

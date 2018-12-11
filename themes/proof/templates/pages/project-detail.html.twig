@@ -2,30 +2,13 @@
 
 {% block content %}
 
-    <div class="project-bg">
+    {% include 'elements/top-content.html.twig' %}
 
-        <div class="content-left">
-            <div class="content-holder">
+    <div class="intro-image">
 
-                <h1>{{ page.header.title }}</h1>
+        <img src="../{{ (page.header.image|first).path }}" alt=""/>
 
-                {#{% for q in page.header.qualifications %}#}
-
-                    {#<span class="caption">{{ q.qualification }}</span>#}
-
-                {#{% endfor %}#}
-
-                <p>{{ page.header.intro }}</p>
-
-            </div>
-        </div>
-        <div class="content-right">
-
-            <img src="../{{ (page.header.image|first).path }}" alt=""/>
-
-        </div>
     </div>
-
 
     {% if page.header.content_intro %}
 
