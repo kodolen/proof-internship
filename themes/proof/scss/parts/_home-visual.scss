@@ -1,80 +1,124 @@
 .home-visual {
 
-    background: linear-gradient(0deg, rgba(38, 104, 198, 0.1) 0%, #386D8C 100%);
     height: 100vh;
+    overflow: hidden;
     position: relative;
     width: 100%;
-    overflow: hidden;
 
-    .landing-holder {
+    .home-visual-background {
 
-        display: flex;
-        height: 100%;
+        @include animation('2000ms forwards upDown');
+
+        background: $blue-gradient;
+        height: auto;
+        opacity: 0;
         width: auto;
 
-        .landings-text {
+        .landing-holder {
 
-            align-self: center;
-            color: $white;
-            text-align: left;
+            display: flex;
+            height: 100%;
             width: auto;
-            z-index: 2;
 
-            h1 {
+            .landings-text {
 
-                margin-top: rem-calc(-8);
+                align-self: center;
+                color: $white;
+                text-align: left;
+                width: auto;
+                z-index: 2;
 
-            }
+                .title {
 
-            p {
-                width: 80%;
-                padding-bottom: rem-calc(8);
+                    margin-top: rem-calc(-8);
 
-                @include breakpoint(medium) {
+                    @include breakpoint(large) {
 
-                    padding-bottom: rem-calc(16);
+                        @include animation('800ms forwards 3600ms leftToRight');
+                        opacity: 0;
+
+                    }
+
+                }
+
+                p {
+                    padding-bottom: rem-calc(8);
+                    width: 80%;
+
+                    @include breakpoint(medium) {
+
+                        padding-bottom: rem-calc(16);
+
+                    }
+
+                    @include breakpoint(large) {
+
+                        @include animation('800ms forwards 4400ms fadeIn');
+                        opacity: 0;
+
+                    }
+
+                }
+
+                .subtitle {
+
+                    margin-bottom: rem-calc(100);
+
+                    @include breakpoint(large) {
+
+                        @include animation('800ms forwards 2800ms leftToRight');
+                        opacity: 0;
+
+                    }
+
+                }
+
+                .button {
+
+                    @include breakpoint(large) {
+
+                        @include animation('800ms forwards 5200ms fadeIn');
+                        opacity: 0;
+
+                    }
 
                 }
 
             }
 
-            .subtitle {
+            .landing-image {
 
-                margin-bottom: rem-calc(100);
-
-            }
-
-        }
-
-        .landing-image {
-
-            align-self: flex-end;
-            position: absolute;
-            width: 100%;
-            right: rem-calc(-100);
-
-            @include breakpoint(medium) {
-
-                right: rem-calc(-200);
-                width: 85%;
-
-            }
-
-
-            @include breakpoint(large) {
-
+                align-self: flex-end;
+                position: absolute;
+                right: rem-calc(-100);
                 width: 100%;
-                right: 0;
-                position: relative;
 
-            }
+                @include breakpoint(medium) {
 
-            img {
+                    right: rem-calc(-200);
+                    width: 85%;
 
-                align-self: center;
-                opacity: 0.3;
-                width: 100%;
-                z-index: 1;
+                }
+
+                @include breakpoint(large) {
+
+                    @include animation('800ms forwards 2000ms leftToRight');
+
+                    opacity: 0;
+                    position: relative;
+                    right: 0;
+                    width: 100%;
+
+                }
+
+                img {
+
+                    align-self: center;
+                    opacity: 0.3;
+                    width: 100%;
+                    z-index: 1;
+
+                }
 
             }
 

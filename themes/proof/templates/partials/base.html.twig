@@ -55,8 +55,10 @@
 {% endblock %}
 
 {% block javascripts %}
-    {% do assets.addJs('jquery', 3) %}
-    {% do assets.addJs('node_modules/swiper/dist/js/swiper.min.js', 2) %}
+    {% do assets.addJs('jquery', 4) %}
+    {% do assets.addJs('node_modules/swiper/dist/js/swiper.min.js', 3) %}
+    {% do assets.addJs('node_modules/waypoints/lib/jquery.waypoints.min.js', 2) %}
+    {% do assets.addJs('node_modules/typed.js/lib/typed.min.js', 5) %}
     {#{% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js', 2) %}#}
     {% do assets.addJs('theme://js/app.js', 1) %}
 {% endblock %}

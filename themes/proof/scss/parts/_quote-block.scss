@@ -17,4 +17,20 @@
 
     }
 
+    .quote {
+
+        opacity: 0;
+
+    }
+
+}
+
+.animate {
+
+    .quote {
+
+        @include animation('600ms forwards 600ms fadeIn')
+
+    }
+
 }

@@ -138,6 +138,31 @@ $(document).ready(function () {
 
     });
 
+    //waypoints
+    $(".content-block-text").waypoint(function () {
+            $(this[0, 'element']).addClass("animate");
+
+        }, {offset: '60%'}
+    );
+
+    $(".quote-block").waypoint(function () {
+            $(this[0, 'element']).addClass("animate");
+
+        }, {offset: '75%'}
+    );
+
+
+    // let $typedText = $('.getText').text();
+    // $(".typed-cursor").hide();
+    //
+    // //typed.js
+    // var typed = new Typed('.typed', {
+    //     strings: [$typedText],
+    //     typeSpeed: 100,
+    //     startDelay: 3000,
+    //     showCursor: false
+    // });
+
 });
 
 

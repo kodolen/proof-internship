@@ -1,34 +1,69 @@
 .top-content {
-
     .content-wrapper {
 
-        @include animation('800ms forwards 200ms appear');
-
-        align-items: center;
-        background: $blue-gradient;
-        color: $white;
-        display: flex;
         height: 100vh;
         width: 100%;
 
-        h1 {
+        .content-wrapper-background {
 
+            @include animation('2000ms forwards upDown');
+
+            align-items: center;
+            background: $blue-gradient;
             color: $white;
-            font-size: rem-calc(40);
-            line-height: rem-calc(32);
+            display: flex;
+            height: auto;
+            opacity: 0;
+            width: auto;
 
-            @include breakpoint(medium) {
+            .title {
 
-                font-size: rem-calc(100);
-                line-height: rem-calc(90);
+                color: $white;
+                font-size: rem-calc(40);
+                line-height: rem-calc(32);
+
+                @include breakpoint(medium) {
+
+                    font-size: rem-calc(100);
+                    line-height: rem-calc(90);
+
+                }
+
+                @include breakpoint(large) {
+
+                    @include animation('800ms forwards 2000ms leftToRight');
+
+                    opacity: 0;
+
+                }
 
             }
 
-        }
+            .text {
 
-        p {
+                margin-bottom: rem-calc(32);
 
-            margin-bottom: rem-calc(32);
+                @include breakpoint(large) {
+
+                    @include animation('800ms forwards 2800ms fadeIn');
+
+                    opacity: 0;
+
+                }
+
+            }
+
+            .button {
+
+                @include breakpoint(large) {
+
+                    @include animation('800ms forwards 3600ms fadeIn');
+
+                    opacity: 0;
+
+                }
+
+            }
 
         }
 
