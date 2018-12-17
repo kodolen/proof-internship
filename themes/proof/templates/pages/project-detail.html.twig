@@ -5,26 +5,30 @@
     {% include 'elements/top-content.html.twig' %}
 
     <div class="container">
+        <div class="intro">
 
-        {#<div class="intro-image">#}
+            {% if page.header.content_intro %}
 
-            {#<img src="../{{ (page.header.image|first).path }}" alt=""/>#}
+                <div class="row">
+                    <div class="column small-12 large-5 large-offset-6">
+                        <div class="intro-content">
 
-        {#</div>#}
+                            <h2> Intro hoofdtitel hier</h2>
+                            <span class="caption">intro caption hier</span>
 
-        {% if page.header.content_intro %}
+                            <p>{{ page.header.content_intro }}</p>
 
-            <div class="row">
-                <div class="column small-12 medium-8 medium-offset-2">
-                    <div class="intro-content">
-
-                        <p>{{ page.header.content_intro }}</p>
-
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        {% endif %}
+                <div class="intro-image">
+                    <img src="../{{ (page.header.image|first).path }}" alt=""/>
+                </div>
+
+            {% endif %}
+
+        </div>
 
         {% if page.header.content_block %}
 
