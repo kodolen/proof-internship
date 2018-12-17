@@ -4,6 +4,15 @@
 project: Proof
 
 */
+.container {
+  background: #FFFFFF;
+  height: auto;
+  position: relative;
+  top: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
 /**
  * Foundation for Sites by ZURB
  * Version 6.5.0
@@ -5600,6 +5609,7 @@ button.swiper-pagination-bullet {
 .footer {
   background-color: #FFA200;
   padding: 0.5rem;
+  z-index: 99;
 }
 @media print, screen and (min-width: 48em) {
   .footer {
@@ -5712,49 +5722,39 @@ button.swiper-pagination-bullet {
   z-index: 1;
 }
 
-.content-block-text {
-  z-index: 99;
+.content-block-wrapper .content-block-text {
   padding: 0.5rem 0;
+  z-index: 99;
 }
 @media print, screen and (min-width: 48em) {
-  .content-block-text {
+  .content-block-wrapper .content-block-text {
     padding: 5rem 0;
   }
 }
 @media print, screen and (min-width: 64em) {
-  .content-block-text {
+  .content-block-wrapper .content-block-text {
     padding: 6.25rem 0;
   }
 }
-.content-block-text .title {
+.content-block-wrapper .content-block-text .title {
   margin-bottom: -0.5rem;
 }
-.content-block-text img {
+.content-block-wrapper .content-block-text img {
   margin-top: 1.5rem;
 }
-.content-block-text .title,
-.content-block-text .caption,
-.content-block-text .text {
+.content-block-wrapper .content-block-text .title,
+.content-block-wrapper .content-block-text .caption,
+.content-block-wrapper .content-block-text .text {
   opacity: 0;
 }
-
-.animate .title {
+.content-block-wrapper .animate .title {
   animation: 600ms forwards leftToRight;
 }
-.animate .caption {
+.content-block-wrapper .animate .caption {
   animation: 600ms forwards 600ms leftToRight;
 }
-.animate .text {
+.content-block-wrapper .animate .text {
   animation: 600ms forwards 1200ms fadeIn;
-}
-
-.container {
-  z-index: 1;
-  background: #FFFFFF;
-  width: 100%;
-  height: auto;
-  position: relative;
-  top: 100vh;
 }
 
 .quote-block {
@@ -5781,6 +5781,9 @@ button.swiper-pagination-bullet {
   animation: 600ms forwards 600ms fadeIn;
 }
 
+.top-content {
+  position: fixed;
+}
 .top-content .content-wrapper {
   height: 100vh;
   width: 100%;
@@ -5853,25 +5856,44 @@ button.swiper-pagination-bullet {
 }
 
 .project-overview {
-  padding: 12.5rem 0;
+  padding: 6.25rem 0;
 }
 .project-overview .content-holder {
-  margin: 2.5rem 0;
+  height: 31.25rem;
+  margin: 5rem 0;
+  width: 100%;
 }
 .project-overview .content-holder .image-holder {
-  transition: all 200ms linear;
   align-items: center;
-  display: flex;
   background: whitesmoke;
-  height: 31.25rem;
+  display: flex;
+  height: 100%;
   justify-content: center;
+  opacity: 0;
+  position: relative;
   width: 100%;
 }
 .project-overview .content-holder .image-holder img {
+  opacity: 0;
   width: 50%;
 }
-.project-overview .content-holder .image-holder:hover {
+.project-overview .content-holder .image-holder:hover .overlay {
+  opacity: 1;
+}
+.project-overview .content-holder .overlay {
+  align-items: center;
   background-color: #FFA200;
+  bottom: 0;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.3s ease;
+  width: 100%;
 }
 .project-overview .content-holder .bottom-content {
   background-color: #FFFFFF;
@@ -5880,9 +5902,10 @@ button.swiper-pagination-bullet {
   padding: 0.5rem 2.5rem;
   width: 100%;
 }
-.project-overview .content-holder .bottom-content h2 {
+.project-overview .content-holder .bottom-content .title {
   font-size: 1.25rem;
   line-height: 0;
+  opacity: 0;
 }
 .project-overview .content-holder .bottom-content p {
   font-size: 0.875rem;
@@ -5891,6 +5914,19 @@ button.swiper-pagination-bullet {
 .project-overview .content-holder .bottom-content span {
   color: grey;
   font-size: 0.75rem;
+  opacity: 0;
+}
+.project-overview .animate .image-holder {
+  animation: 800ms forwards upDownProject;
+}
+.project-overview .animate .image-holder img {
+  animation: 800ms forwards 800ms fadeIn;
+}
+.project-overview .animate .bottom-content .title {
+  animation: 800ms forwards 1600ms fadeIn;
+}
+.project-overview .animate .bottom-content span {
+  animation: 800ms forwards 2400ms fadeIn;
 }
 
 .intro-image {
@@ -6073,6 +6109,16 @@ button.swiper-pagination-bullet {
   100% {
     opacity: 1;
     height: 100vh;
+  }
+}
+@keyframes upDownProject {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 500px;
   }
 }
 @keyframes menuDown {

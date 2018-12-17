@@ -2,28 +2,30 @@
 
     {% for text in page.header.custom_text_fields %}
 
-        <div class="row">
-            <div class="column small-12 medium-8 medium-offset-2 large-4 large-offset-4">
-                <div class="content-block-text" id="block">
+        <div class="content-block-wrapper">
+            <div class="row">
+                <div class="column small-12 medium-8 medium-offset-2 large-4 large-offset-4">
+                    <div class="content-block-text" id="block">
 
-                    {% if text.title %}
+                        {% if text.title %}
 
-                        <h2 class="title">{{ text.title }}</h2>
+                            <h2 class="title">{{ text.title }}</h2>
 
-                    {% endif %}
+                        {% endif %}
 
-                    {% if text.caption %}
+                        {% if text.caption %}
 
-                        <span class="caption">{{ text.caption }}</span>
+                            <span class="caption">{{ text.caption }}</span>
 
-                    {% endif %}
+                        {% endif %}
 
-                    {% if text.textarea %}
+                        {% if text.textarea %}
 
-                        <p class="text">{{ text.textarea }}</p>
+                            <p class="text">{{ text.textarea }}</p>
 
-                    {% endif %}
+                        {% endif %}
 
+                    </div>
                 </div>
             </div>
         </div>

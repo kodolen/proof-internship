@@ -30,11 +30,11 @@ $(document).ready(function () {
         },
     });
 
-    $(function () {
-        $('html, body').animate({
-            scrollTop: $('.intro-content').offset().top
-        }, 1000);
-    });
+    // $(function () {
+    //     $('html, body').animate({
+    //         scrollTop: $('.intro-content').offset().top
+    //     }, 1000);
+    // });
 
     //Accordions
     $accordionButton.click(function (e) {
@@ -142,7 +142,7 @@ $(document).ready(function () {
     $(".content-block-text").waypoint(function () {
             $(this[0, 'element']).addClass("animate");
 
-        }, {offset: '60%'}
+        }, {offset: '75%'}
     );
 
     $(".quote-block").waypoint(function () {
@@ -150,6 +150,13 @@ $(document).ready(function () {
 
         }, {offset: '75%'}
     );
+
+    $(".content-holder").waypoint(function () {
+            $(this[0, 'element']).addClass("animate");
+
+        }, {offset: '40%'}
+    );
+
 
 
     // let $typedText = $('.getText').text();

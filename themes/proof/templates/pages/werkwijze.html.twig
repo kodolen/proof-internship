@@ -4,113 +4,117 @@
 
     {% include 'elements/top-content.html.twig' %}
 
-    {% if page.header.custom_text_fields %}
+    <div class="container">
 
-        {% for text in page.header.custom_text_fields %}
+        {% if page.header.custom_text_fields %}
 
-            <div class="row">
-                <div class="column medium-4 medium-offset-4">
-                    <div class="content-block-text" data-accordion-holder>
-                        <div class="row">
+            {% for text in page.header.custom_text_fields %}
 
-                            {% if text.image %}
+                <div class="row">
+                    <div class="column medium-4 medium-offset-4">
+                        <div class="content-block-text" data-accordion-holder>
+                            <div class="row">
 
-                                <div class="column medium-2">
+                                {% if text.image %}
 
-                                    <img src="{{ (text.image|first).path }}" alt=""/>
+                                    <div class="column medium-2">
 
-                                </div>
+                                        <img src="{{ (text.image|first).path }}" alt=""/>
 
-                            {% endif %}
+                                    </div>
 
-                            {% if text.title and text.caption %}
+                                {% endif %}
 
-                                <div class="column medium-6">
+                                {% if text.title and text.caption %}
 
-                                    <h2>{{ text.title }}</h2>
+                                    <div class="column medium-6">
 
-                                    <span class="caption">{{ text.caption }}</span>
+                                        <h2>{{ text.title }}</h2>
 
+                                        <span class="caption">{{ text.caption }}</span>
+
+                                    </div>
+
+                                {% endif %}
+
+                            </div>
+
+                            {% if text.preview %}
+
+                                <div class="row">
+                                    <div class="column medium-12">
+
+                                        <p>{{ text.preview }}</p>
+
+                                        <p class="accordion-text hidden holder">
+
+                                            {{ text.textarea }}
+
+                                            <span class="overlay"></span>
+
+                                        </p>
+
+                                        <span class="link" data-accordion-button>Lees meer</span>
+
+                                    </div>
                                 </div>
 
                             {% endif %}
 
                         </div>
+                    </div>
+                </div>
 
-                        {% if text.preview %}
+            {% endfor %}
 
-                            <div class="row">
-                                <div class="column medium-12">
+        {% endif %}
 
-                                    <p>{{ text.preview }}</p>
+        {% if page.header.summary and page.header.summary_title and page.header.summary_preview %}
 
-                                    <p class="accordion-text hidden holder">
+            <div class="summary-wrapper">
+                <div class="row">
+                    <div class="column medium-8 medium-offset-2">
 
-                                        {{ text.textarea }}
+                        <h2>{{ page.header.summary_title }}</h2>
 
-                                        <span class="overlay"></span>
+                        <p> {{ page.header.summary_preview }} </p>
 
-                                    </p>
+                        <p class="accordion-text hidden holder">
 
-                                    <span class="link" data-accordion-button>Lees meer</span>
+                            {{ page.header.summary }}
 
-                                </div>
-                            </div>
+                            <span class="overlay"></span>
 
-                        {% endif %}
+                        </p>
+
+                        <span class="link" data-accordion-button>Lees meer</span>
 
                     </div>
                 </div>
             </div>
 
-        {% endfor %}
+        {% endif %}
 
-    {% endif %}
-
-    {% if page.header.summary and page.header.summary_title and page.header.summary_preview %}
-
-        <div class="summary-wrapper">
+        <div class="bottom-content">
             <div class="row">
                 <div class="column medium-8 medium-offset-2">
 
-                    <h2>{{ page.header.summary_title }}</h2>
+                    {#TODO Add translations or via admin panel#}
+                    <span class="caption">Gebruikte Programmeertalen:</span>
 
-                    <p> {{ page.header.summary_preview }} </p>
+                    <div class="logo-wrapper">
 
-                    <p class="accordion-text hidden holder">
+                        {% for logo in page.header.programming_logos %}
 
-                        {{ page.header.summary }}
+                            <img src="{{ (logo.logo|first).path }}"/>
 
-                        <span class="overlay"></span>
+                        {% endfor %}
 
-                    </p>
-
-                    <span class="link" data-accordion-button>Lees meer</span>
-
+                    </div>
                 </div>
             </div>
         </div>
 
-    {% endif %}
-
-    <div class="bottom-content">
-        <div class="row">
-            <div class="column medium-8 medium-offset-2">
-
-                {#TODO Add translations or via admin panel#}
-                <span class="caption">Gebruikte Programmeertalen:</span>
-
-                <div class="logo-wrapper">
-
-                    {% for logo in page.header.programming_logos %}
-
-                        <img src="{{ (logo.logo|first).path }}"/>
-
-                    {% endfor %}
-
-                </div>
-            </div>
-        </div>
     </div>
 
 

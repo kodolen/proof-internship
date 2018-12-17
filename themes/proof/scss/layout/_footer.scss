@@ -2,6 +2,7 @@
 
     background-color: $orange;
     padding: rem-calc(8);
+    z-index: 99;
 
     @include breakpoint(medium) {
 
