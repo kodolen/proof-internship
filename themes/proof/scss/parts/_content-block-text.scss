@@ -1,5 +1,7 @@
 .content-block-text {
 
+    z-index: 99;
+
     padding: rem-calc(8 0);
 
     @include breakpoint(medium) {
@@ -55,6 +57,17 @@
         @include animation('600ms forwards 1200ms fadeIn');
 
     }
+
+}
+
+.container {
+
+    z-index: 1;
+    background: $white;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100vh;
 
 }
 

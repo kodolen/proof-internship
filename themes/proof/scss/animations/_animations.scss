@@ -35,7 +35,7 @@
 
     }
 
-    30% {
+    40% {
 
         height: 20%;
 
@@ -45,6 +45,24 @@
 
         opacity: 1;
         height: 100vh;
+
+    }
+
+}
+
+@keyframes menuDown  {
+
+    0% {
+
+        opacity: 0;
+        top: rem-calc(-100);
+
+    }
+
+    100% {
+
+        opacity: 1;
+        top: rem-calc(0);
 
     }
 

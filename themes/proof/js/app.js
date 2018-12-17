@@ -18,7 +18,7 @@ $(document).ready(function () {
         fadeEffect: {
             crossFade: true
         },
-        mousewheel: true,
+        mousewheel: false,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

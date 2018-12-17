@@ -2,60 +2,48 @@
 
 {% block content %}
 
-    <div class="swiper-content">
+    {% include 'elements/top-content.html.twig' %}
 
-        <!-- Slider main container -->
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+    <div class="project-overview">
+        <div class="row">
 
-                <!-- Slides -->
-                {% for p in page.find('/projecten').children if p != page %}
+            {% for p in page.find('/projecten').children if p != page %}
 
-                    <div class="swiper-slide">
-                        <div class="content-left">
-                            <div class="content-holder">
+                <div
+                    class="column {% if loop.index is divisibleby(2) %} small-12 medium-5 large-4 {% else %} small-12 medium-5 medium-offset-1 large-4 large-offset-2 {% endif %}">
 
-                                <h1>{{ p.header.title }}</h1>
+                    <div class="content-holder">
+                        <a class="image-holder" href="{{ p.url }}">
 
-                                {#{% for q in p.header.qualifications %}#}
+                            {#<img src="{{ (p.header.image|first).path }}" alt=""/>#}
 
-                                {#<span class="caption">{{ q.qualification }}</span>#}
+                        </a>
 
-                                {#{% endfor %}#}
+                        <div class="bottom-content">
 
-                                <p>{{ p.header.intro }}</p>
+                            <h2>{{ p.header.title }}</h2>
 
-                                {#TODO Add translation#}
-                                <a href="{{ p.url }}" class="secondary button">Bekijk project</a>
+                            {% for q in p.header.qualifications %}
 
-                            </div>
-                        </div>
-                        <div class="content-right">
+                                <span class="caption">{{ q.qualification }}</span>
 
-                            <div class="image-holder">
+                            {% endfor %}
 
-                                <img src="{{ (p.header.image|first).path }}" alt=""/>
+                            {#<p>{{ p.header.intro }}</p>#}
 
-                            </div>
-
-                            <!-- If we need pagination -->
-                            <div class="swiper-pagination"></div>
-
-                            <!-- If we need navigation buttons -->
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
+                            {#TODO Add translation#}
+                            {#<a href="{{ p.url }}" class="secondary button">Bekijk project</a>#}
 
                         </div>
                     </div>
+                </div>
 
-                {% endfor %}
+            {% endfor %}
 
-            </div>
         </div>
     </div>
 
     {# removes footer #}
-    {% block footer %}{% endblock %}
+    {#{% block footer %}{% endblock %}#}
 
 {% endblock %}

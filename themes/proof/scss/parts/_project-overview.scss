@@ -1,0 +1,73 @@
+.project-overview {
+
+    padding: rem-calc(200 0);
+
+    .down {
+
+        //margin-top: rem-calc(200);
+
+    }
+
+    .content-holder {
+
+        margin: rem-calc(40 0);
+
+        .image-holder {
+
+
+            transition: all 200ms linear;
+            align-items: center;
+            display: flex;
+            background: whitesmoke;
+            height: rem-calc(500);
+            justify-content: center;
+            width: 100%;
+
+            img {
+
+                width: 50%;
+
+            }
+
+            &:hover {
+
+                background-color: $orange;
+
+            }
+
+        }
+
+        .bottom-content {
+
+            background-color: $white;
+            border-bottom: 1px solid whitesmoke;
+            height: auto;
+            padding: rem-calc(8 40);
+            width: 100%;
+
+            h2 {
+
+                font-size: rem-calc(20);
+                line-height: rem-calc(0);
+
+            }
+
+            p {
+
+                font-size: rem-calc(14);
+                line-height: rem-calc(20);
+
+            }
+
+            span {
+
+                color: grey;
+                font-size: rem-calc(12);
+
+            }
+
+        }
+
+    }
+
+}
