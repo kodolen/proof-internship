@@ -23,7 +23,10 @@ form:
                             label: Tekst
                         header.quote:
                             type: markdown
-                            label: Additional Quote
+                            label: Quote
+                            showPreview: true
+                            validate:
+                                type: textarea
                         header.custom_text_fields:
                             name: fields
                             type: list
