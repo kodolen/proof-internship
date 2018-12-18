@@ -4,18 +4,20 @@
 
     {% include 'elements/top-content.html.twig' %}
 
+    {% include 'elements/quote-block.html.twig' %}
+
     <div class="container">
         <div class="workflow">
 
             {% if page.header.custom_text_fields %}
 
             <div class="row">
-                <div class="column medium-8 medium-offset-2">
+                <div class="column small-12 medium-10 medium-offset-1 large-8 large-offset-2">
                     <div class="row">
 
                         {% for text in page.header.custom_text_fields %}
 
-                            <div class="column medium-6">
+                            <div class="column small-12 medium-6">
                                 <div class="block-wrapper">
                                     <div class="content-block-text" data-accordion-holder>
                                         <div class="title-wrapper">
@@ -43,7 +45,7 @@
                                         {% if text.preview %}
 
 
-                                            <p>{{ text.preview }}</p>
+                                            {#<p>{{ text.preview }}</p>#}
 
                                             <p class="accordion-text hidden holder">
 
@@ -97,7 +99,7 @@
             </div>
 
         {% endif %}
-        
+
         <div class="bottom-content">
             <div class="row">
                 <div class="column medium-8 medium-offset-2">

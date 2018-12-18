@@ -66,21 +66,48 @@
 
 .workflow {
 
-    padding: rem-calc(200 0);
+    padding: rem-calc(10 0);
+
+    @include breakpoint(medium) {
+
+        padding: rem-calc(100 0);
+
+    }
+
+    @include breakpoint(large) {
+
+        padding: rem-calc(200 0);
+
+    }
 
     .block-wrapper {
 
         .content-block-text {
 
-            padding: rem-calc(100 40);
+            opacity: 0;
+
+            padding: rem-calc(40 20);
+
+            @include breakpoint(medium) {
+
+                padding: rem-calc(80 20);
+
+            }
+
+            @include breakpoint(large) {
+
+                padding: rem-calc(100 40);
+
+            }
 
             .title-wrapper {
 
+                align-items: center;
+                border-bottom: 1px solid lightgray;
                 display: flex;
-                width: 100%;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                width: 100%;
 
                 h2 {
 
@@ -88,7 +115,37 @@
 
                 }
 
+                .caption {
+
+                    margin-bottom: rem-calc(8);
+
+                }
+
+                .block-img-wrapper {
+
+                    align-items: center;
+                    background-color: $grey;
+                    border-radius: 50%;
+                    display: flex;
+                    height: rem-calc(75);
+                    justify-content: center;
+                    width: rem-calc(75);
+
+                    img {
+
+                        width: 50%;
+
+                    }
+
+                }
+
             }
+
+        }
+
+        .animate {
+
+            @include animation('600ms forwards fadeIn');
 
         }
 

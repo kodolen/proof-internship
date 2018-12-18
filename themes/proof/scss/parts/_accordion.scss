@@ -3,7 +3,6 @@
     max-height: 100%;
     overflow: hidden;
     position: relative;
-    transition: all ease 1s;
 
     &.hidden {
 
@@ -17,7 +16,6 @@
             left: 0;
             opacity: 1;
             position: absolute;
-            transition: all ease 1s;
             visibility: visible;
             width: 100%;
 
@@ -28,7 +26,6 @@
     .overlay {
 
         opacity: 0;
-        transition: all ease 1s;
         visibility: hidden;
 
     }
@@ -38,5 +35,23 @@
 .link {
 
     float: right;
+
+}
+
+.summary-wrapper {
+
+    .holder {
+
+        &.hidden {
+
+            .overlay {
+
+                background-image: linear-gradient(-180deg, rgba(238, 238, 238, 0.00) 4%, #FBFBFB 81%);
+
+            }
+
+        }
+
+    }
 
 }

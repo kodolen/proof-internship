@@ -15,6 +15,12 @@ form:
                         header.intro_title:
                             type: text
                             label: intro Titel
+                        header.quote:
+                            type: markdown
+                            label: Quote
+                            showPreview: true
+                            validate:
+                                type: textarea
                         header.custom_text_fields:
                             name: fields
                             type: list

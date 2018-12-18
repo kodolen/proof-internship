@@ -6,19 +6,7 @@
 
     <div class="container">
 
-        {% if page.header.quote %}
-
-            <div class="quote-block">
-                <div class="row">
-                    <div class="column small-12 large-8 large-offset-2 xlarge-6 xlarge-offset-3">
-
-                        <span class="quote">{{ page.header.quote }}</span>
-
-                    </div>
-                </div>
-            </div>
-
-        {% endif %}
+        {% include 'elements/quote-block.html.twig' %}
 
         {% include 'elements/content-block-text.html.twig' %}
 
