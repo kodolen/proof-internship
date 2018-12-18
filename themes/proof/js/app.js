@@ -163,18 +163,11 @@ $(document).ready(function () {
         }, {offset: '40%'}
     );
 
+    $(".content-wrapper").waypoint(function () {
+            $(this[0, 'element']).addClass("animate");
 
-
-    // let $typedText = $('.getText').text();
-    // $(".typed-cursor").hide();
-    //
-    // //typed.js
-    // var typed = new Typed('.typed', {
-    //     strings: [$typedText],
-    //     typeSpeed: 100,
-    //     startDelay: 3000,
-    //     showCursor: false
-    // });
+        }, {offset: '50%'}
+    );
 
 });
 

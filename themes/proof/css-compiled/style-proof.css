@@ -5757,6 +5757,23 @@ button.swiper-pagination-bullet {
   animation: 600ms forwards 1200ms fadeIn;
 }
 
+.workflow {
+  padding: 12.5rem 0;
+}
+.workflow .block-wrapper .content-block-text {
+  padding: 6.25rem 2.5rem;
+}
+.workflow .block-wrapper .content-block-text .title-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.workflow .block-wrapper .content-block-text .title-wrapper h2 {
+  margin: 0;
+}
+
 .quote-block {
   background-color: #F7F7F7;
   padding: 2rem 0;
@@ -5816,11 +5833,11 @@ button.swiper-pagination-bullet {
     opacity: 0;
   }
 }
-.top-content .content-wrapper .content-wrapper-background .text {
+.top-content .content-wrapper .content-wrapper-background p {
   margin-bottom: 2rem;
 }
 @media print, screen and (min-width: 64em) {
-  .top-content .content-wrapper .content-wrapper-background .text {
+  .top-content .content-wrapper .content-wrapper-background p {
     animation: 800ms forwards 2800ms fadeIn;
     opacity: 0;
   }
@@ -5984,11 +6001,16 @@ button.swiper-pagination-bullet {
   height: 100vh;
   justify-content: center;
 }
+.content-container .content-wrapper h2,
+.content-container .content-wrapper p {
+  opacity: 0;
+}
 .content-container .content-wrapper .image-content-holder {
   align-items: center;
   display: flex;
   height: 100%;
   justify-content: center;
+  opacity: 0;
 }
 .content-container .content-wrapper:nth-child(odd) {
   background: rgba(247, 247, 247, 0.5);
@@ -5996,6 +6018,18 @@ button.swiper-pagination-bullet {
 .content-container .content-wrapper:last-child {
   height: auto;
   padding: 2.5rem 0;
+}
+.content-container .content-wrapper.animate h2 {
+  animation: 800ms forwards leftToRight;
+}
+.content-container .content-wrapper.animate p {
+  animation: 800ms forwards 800ms fadeIn;
+}
+.content-container .content-wrapper.animate .image-content-holder {
+  animation: 800ms forwards 1600ms fadeIn;
+}
+.content-container .content-wrapper.animate .even h2 {
+  animation: 800ms forwards rightToLeft;
 }
 
 .even {
@@ -6117,6 +6151,16 @@ button.swiper-pagination-bullet {
 @keyframes appear {
   100% {
     opacity: 1;
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    margin-left: 12.5rem;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
   }
 }
 @keyframes leftToRight {

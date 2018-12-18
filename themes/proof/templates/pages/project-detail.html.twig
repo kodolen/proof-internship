@@ -21,9 +21,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="intro-image">
+
                     <img src="../{{ (page.header.image|first).path }}" alt=""/>
+
                 </div>
 
             {% endif %}
@@ -38,14 +39,19 @@
 
                     <div class="content-wrapper">
                         <div class="row">
-                            <div
-                                class="column medium-4 medium-offset-1{% if loop.index is divisibleby(2) %} even{% endif %}">
+
+                            <div class="column medium-4 medium-offset-1{% if loop.index is divisibleby(2) %} even{% endif %}">
+
                                 <h2> {{ content.title }} </h2>
+
                                 <p> {{ content.text }} </p>
+
                             </div>
                             <div class="column medium-5 medium-offset-1">
                                 <div class="image-content-holder">
+
                                     <img src="../{{ (content.image | first).path }}" alt=""/>
+
                                 </div>
                             </div>
                         </div>
@@ -70,6 +76,8 @@
                 {% endif %}
 
             </div>
+
+            {% include 'layout/footer.html.twig' %}
 
         {% endif %}
 
