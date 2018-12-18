@@ -22,7 +22,7 @@ form:
                             type: textarea
                             label: Tekst
                         header.quote:
-                            type: text
+                            type: markdown
                             label: Additional Quote
                         header.custom_text_fields:
                             name: fields

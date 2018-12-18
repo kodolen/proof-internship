@@ -59,10 +59,41 @@
 
     }
 
+    40% {
+
+        height: 200px;
+
+    }
+
     100% {
 
         opacity: 1;
         height: 500px;
+
+    }
+
+}
+
+@keyframes leftToRightProject {
+
+
+    0% {
+
+        opacity: 0;
+        width: 0;
+
+    }
+
+    40% {
+
+        width: 10%;
+
+    }
+
+    100% {
+
+        opacity: 1;
+        width: 50%;
 
     }
 

@@ -157,6 +157,12 @@ $(document).ready(function () {
         }, {offset: '40%'}
     );
 
+    $(".intro").waypoint(function () {
+            $(this[0, 'element']).addClass("animate");
+
+        }, {offset: '40%'}
+    );
+
 
 
     // let $typedText = $('.getText').text();

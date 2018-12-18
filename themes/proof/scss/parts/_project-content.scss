@@ -9,6 +9,14 @@
 
     }
 
+    h2,
+    span,
+    p {
+
+        opacity: 0;
+
+    }
+
     .intro-image {
 
         align-items: center;
@@ -21,10 +29,48 @@
         top: 0;
         bottom: 0;
         background-color: whitesmoke;
+        opacity: 0;
 
         img {
 
             width: 50%;
+            opacity: 0;
+
+        }
+
+    }
+
+    &.animate {
+
+        .intro-image {
+
+            @include animation('800ms forwards leftToRightProject');
+
+            img {
+
+                @include animation('800ms forwards 800ms fadeIn');
+
+            }
+
+        }
+
+        h2 {
+
+            @include animation('800ms forwards 1600ms leftToRight');
+
+        }
+
+        span {
+
+            @include animation('800ms forwards 2400ms leftToRight');
+
+
+        }
+
+        p {
+
+            @include animation('800ms forwards 3200ms fadeIn');
+
 
         }
 
