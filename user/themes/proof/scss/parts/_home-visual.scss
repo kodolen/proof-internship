@@ -1,0 +1,130 @@
+.home-visual {
+
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+
+    .home-visual-background {
+
+        @include animation('2000ms forwards 400ms upDown');
+
+        background: $blue-gradient;
+        background-attachment: fixed;
+        height: auto;
+        opacity: 0;
+        width: auto;
+
+        .landing-holder {
+
+            display: flex;
+            height: 100%;
+            width: auto;
+
+            .landings-text {
+
+                align-self: center;
+                color: $white;
+                text-align: left;
+                width: auto;
+                z-index: 2;
+
+                .title {
+
+                    margin-top: rem-calc(-8);
+
+                    @include breakpoint(large) {
+
+                        @include animation('800ms forwards 4000ms leftToRight');
+                        opacity: 0;
+
+                    }
+
+                }
+
+                p {
+                    padding-bottom: rem-calc(8);
+                    width: 80%;
+
+                    @include breakpoint(medium) {
+
+                        padding-bottom: rem-calc(16);
+
+                    }
+
+                    @include breakpoint(large) {
+
+                        @include animation('800ms forwards 4800ms fadeIn');
+                        opacity: 0;
+
+                    }
+
+                }
+
+                .subtitle {
+
+                    margin-bottom: rem-calc(100);
+
+                    @include breakpoint(large) {
+
+                        @include animation('800ms forwards 3200ms leftToRight');
+                        opacity: 0;
+
+                    }
+
+                }
+
+                .button {
+
+                    @include breakpoint(large) {
+
+                        @include animation('800ms forwards 5600ms fadeIn');
+                        opacity: 0;
+
+                    }
+
+                }
+
+            }
+
+            .landing-image {
+
+                align-self: flex-end;
+                position: absolute;
+                right: rem-calc(-100);
+                width: 100%;
+
+                @include breakpoint(medium) {
+
+                    right: rem-calc(-200);
+                    width: 85%;
+
+                }
+
+                @include breakpoint(large) {
+
+                    @include animation('800ms forwards 2400ms leftToRight');
+
+                    opacity: 0;
+                    position: relative;
+                    right: rem-calc(-200);
+                    width: 100%;
+
+                }
+
+                img {
+
+                    align-self: center;
+                    opacity: 0.3;
+                    width: 100%;
+                    z-index: 1;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

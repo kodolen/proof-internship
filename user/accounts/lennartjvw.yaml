@@ -1,0 +1,11 @@
+email: lennartjvw@icloud.com
+fullname: 'Lennart van Welzen'
+title: 'Lennart van Welzen'
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$3g/q4mBjQEcoW2IBJczVnejA0B.LdtvCBUIQZVPj9J04qbdQju8D.

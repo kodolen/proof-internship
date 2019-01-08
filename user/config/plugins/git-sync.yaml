@@ -1,0 +1,25 @@
+enabled: true
+folders:
+  - themes
+sync:
+  on_save: true
+  on_delete: true
+  on_media: true
+  cron_enable: false
+  cron_at: '0 12,23 * * *'
+repository: 'https://github.com/kodolen/proof-internship.git'
+user: kodolen
+webhook: /_git-sync-b850aecf6db7
+webhook_enabled: '0'
+webhook_secret: 1b760d677ec8665a84b832e9c39c48e98d84ed3aebf28654
+branch: master
+remote:
+  name: origin
+  branch: master
+git:
+  author: gituser
+  name: GitSync
+  email: git-sync@trilby.media
+  bin: git
+logging: false
+password: gitsync-def5020044a6f42fe28958dbf0c6c4c57b91a72f61047488597e1e52daa6b8ea58f028ca29574edec3499ca811dd9513e5710b4891b9ee5be0991b1f7a8c088e79a02e31b153b07e79c53582e5cbaee5a6c6be79c144a16a517e53d555

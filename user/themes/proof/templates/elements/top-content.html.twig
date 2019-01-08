@@ -1,0 +1,39 @@
+{% if page.title %}
+    {% set title = page.title %}
+{% endif %}
+{% if page.header.intro_title %}
+    {% set title = page.header.intro_title %}
+{% endif %}
+{% if page.content %}
+    {% set content = page.content %}
+{% endif %}
+{% if page.header.intro %}
+    {% set content = page.header.intro %}
+{% endif %}
+
+<div class="top-content">
+    <div class="row">
+        <div class="content-wrapper">
+            <div class="content-wrapper-background">
+                <div class="column small-11 small-offset-1 medium-6 medium-offset-1 large-5 large-offset-1">
+
+                    {% if title %}
+
+                        <h1 class="title">{{ title }}</h1>
+
+                    {% endif %}
+
+                    {% if content %}
+
+                        <p class="text">{{ content }}</p>
+
+                    {% endif %}
+
+                    {#TODO Add translations#}
+                    <a href="#" class="secondary button">Lees meer</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

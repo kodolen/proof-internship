@@ -1,0 +1,43 @@
+{% if page.media %}
+
+    <div class="home-visual">
+        <div class="home-visual-background">
+            <div class="landing-holder">
+                <div class="row">
+                    <div class="column medium-9 medium-offset-1 large-5 large-offset-1 landings-text">
+
+                        {% if page.header.intro_subtitle %}
+
+                            <span class="subtitle">{{ page.header.intro_subtitle }}</span>
+
+                        {% endif %}
+
+                        {% if page.header.intro_title %}
+
+                            <h1 class="title">{{ page.header.intro_title }}</h1>
+
+                        {% endif %}
+
+                        {% if page.header.intro_text %}
+
+                            <p>{{ page.header.intro_text }}</p>
+
+                        {% endif %}
+
+                        <a href="#" class="button secondary">Lees meer</a>
+
+                    </div>
+                    <div class="column large-4 large-offset-1 landing-image">
+
+                        <img src="{{ page.media['lennart-zw.png'].url }}" alt=""/>
+
+                    </div>
+                </div>
+
+                {% include 'elements/mouse-scroller.html.twig' %}
+
+            </div>
+        </div>
+    </div>
+
+{% endif %}

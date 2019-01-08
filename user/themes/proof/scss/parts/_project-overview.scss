@@ -1,0 +1,126 @@
+.project-overview {
+
+    padding: rem-calc(100 0);
+
+    .content-holder {
+
+        height: rem-calc(500);
+        margin: rem-calc(80 0);
+        width: 100%;
+
+        .image-holder {
+
+            align-items: center;
+            background: whitesmoke;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            opacity: 0;
+            position: relative;
+            width: 100%;
+
+            img {
+
+                opacity: 0;
+                width: 50%;
+
+            }
+
+            &:hover {
+
+                .overlay {
+
+                    opacity: 1;
+
+                }
+
+            }
+
+        }
+
+        .overlay {
+
+            align-items: center;
+            background-color: $orange;
+            bottom: 0;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .3s ease;
+            width: 100%;
+
+        }
+
+        .bottom-content {
+
+            background-color: $white;
+            border-bottom: 1px solid whitesmoke;
+            height: auto;
+            padding: rem-calc(8 40);
+            width: 100%;
+
+            .title {
+
+                font-size: rem-calc(20);
+                line-height: rem-calc(0);
+                opacity: 0;
+
+            }
+
+            p {
+
+                font-size: rem-calc(14);
+                line-height: rem-calc(20);
+
+            }
+
+            span {
+
+                color: grey;
+                font-size: rem-calc(12);
+                opacity: 0;
+
+            }
+
+        }
+
+    }
+
+    .animate {
+
+        .image-holder {
+
+            @include animation('800ms forwards upDownProject');
+
+            img {
+
+                @include animation('800ms forwards 800ms fadeIn');
+
+            }
+
+        }
+
+        .bottom-content {
+
+            .title {
+
+                @include animation('800ms forwards 1600ms fadeIn');
+
+            }
+
+            span {
+
+                @include animation('800ms forwards 2400ms fadeIn');
+
+            }
+
+        }
+
+    }
+
+}

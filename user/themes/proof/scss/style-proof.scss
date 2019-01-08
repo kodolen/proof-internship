@@ -1,0 +1,39 @@
+/*
+
+project: Proof
+
+*/
+
+@import '_settings';
+
+//Base
+@import 'base/_foundation';
+@import 'base/_typography';
+@import 'base/_buttons';
+
+//Plugins
+@import 'plugins/_swiper';
+
+// Mixins
+@import 'mixins/_mixins';
+
+//Layout
+@import 'layout/_header';
+@import 'layout/_footer';
+
+//Parts
+@import 'parts/_home-visual';
+@import 'parts/_content-block-text';
+@import 'parts/_quote-block.scss';
+@import 'parts/_top-content.scss';
+@import 'parts/_bottom-content.scss';
+@import 'parts/_project-overview.scss';
+@import 'parts/_project-content.scss';
+@import 'parts/_accordion.scss';
+@import 'parts/_mouse-scroller.scss';
+
+//Partials
+@import 'partials/_hamburger';
+
+//Animations
+@import 'animations/_animations.scss';
