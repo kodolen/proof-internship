@@ -1,0 +1,82 @@
+title: Project detail
+'@extends':
+    type: default #choose template here, for example, if we are adding custom fields to default.html.twig – then we would put 'default' here under type. if we were adding custom fields to a template coolpage.html.twig, we would put 'page' here.
+    context: blueprints://pages
+
+form:
+    fields:
+        tabs:
+            type: tabs
+            active: 1
+
+            fields:
+                content:
+                    fields:
+                        header.title: #creates a text field, notice that the part after header is named something, this can be anything, you will reference it later.
+                            type: text
+                            label: Project titel
+                        header.image: #see comment above, creates a place to select specific media from the uploader, useful for highlighting a featured image, icon or logo
+                            type: file
+                            label: Afbeelding
+                            destination: 'user/themes/proof/assets'
+                        header.intro:  #see comment above, created an additional markdown enabled text editor, useful for multiple text blocks. This is more advanced you must use the |markdown filter to make it appear as markdown in the template file ex: {{page.header.another_markdown_area |markdown}}
+                            type: markdown
+                            label: Intro
+                            showPreview: true
+                            validate:
+                                type: textarea
+                        header.qualifications:
+                            name: fields
+                            type: list
+                            style: vertical
+                            label: Eindkwalificaties
+                            fields:
+                                .qualification:
+                                    type: select_optgroup
+                                    label: Eindkwalificatie
+                                    options:
+                                    - Ontwikkelen 1:
+                                        - 1.1 Technische kennis en analyse
+                                        - 1.2 Ontwikkelen en prototypen
+                                        - 1.3 Testen en implementeren
+                                    - Onderzoeken en analyseren 2:
+                                        - 2.1 Onderzoeken en analyseren
+                                    - Ontwerpen 3:
+                                        - 3.1 Conceptualiseren
+                                    - Ondernemen 4:
+                                        - 4.1 Ondernemende houding
+                                        - 4.2 Ondernemende vaardigheden
+                                        - 4.3 Projectmatig werken
+                                    - Betrokken 5:
+                                        - 5.1 Lerend vermogen
+                                        - 5.2 Maatschappelijke verantwoordelijkheid
+                        header.content_intro:
+                            type: textarea
+                            label: Content intro tekst
+                        header.content_block:
+                            name: fields
+                            type: list
+                            style: vertical
+                            label: Content blok
+                            fields:
+                                .title:
+                                    type: text
+                                    label: Title
+                                .text:
+                                    type: textarea
+                                    label: Content tekst
+                                .image:
+                                    type: file
+                                    label: Upload image
+                                    destination: 'user/themes/proof/assets'
+                        header.content_reflection:
+                            type: textarea
+                            label: Reflectie
+
+
+
+
+
+
+
+

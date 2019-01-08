@@ -1,0 +1,101 @@
+.menu-toggle {
+
+    cursor: pointer;
+    position: fixed;
+    right: rem-calc(75);
+    top: rem-calc(32);
+    transition: all 0.5s ease-out;
+    z-index: 99;
+
+    @include breakpoint(large) {
+
+        right: rem-calc(100);
+        top: rem-calc(-50);
+
+    }
+
+    .hamburger {
+
+        padding: rem-calc(8);
+        position: absolute;
+
+        span {
+
+            background-color: $white;
+            display: block;
+            height: rem-calc(3);
+            margin-bottom: rem-calc(4);
+            position: relative;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+            width: rem-calc(30);
+            z-index: 50;
+
+            &:last-child {
+
+                margin-bottom: 0;
+
+            }
+
+        }
+
+    }
+
+}
+
+.scrolled {
+
+    .menu-toggle {
+
+        top: rem-calc(32);
+
+    }
+
+}
+
+.menu-open {
+
+    .hamburger {
+
+        span {
+            opacity: 1;
+
+            transform: rotate(45deg) translate(-2px, -8px);
+            transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.22s ease;
+
+            &:nth-last-child(2) {
+
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+
+            }
+
+            &:nth-last-child(3) {
+
+                opacity: 1;
+                transform: rotate(-45deg) translate(-2px, 8px);
+
+            }
+
+        }
+
+    }
+
+}
+
+.changeColor {
+
+    .hamburger {
+
+        span {
+
+            background: linear-gradient(0deg, rgba(46, 70, 104, 0.39) 0%, #5BADDE 100%);
+
+        }
+
+    }
+
+}

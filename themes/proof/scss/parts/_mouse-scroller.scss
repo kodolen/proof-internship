@@ -1,0 +1,44 @@
+.mouse-sroller {
+
+    visibility: hidden;
+
+    @include breakpoint(large) {
+
+        @include animation('800ms forwards 4800ms fadeIn');
+
+        bottom: rem-calc(20);
+        height: rem-calc(55);
+        left: 50%;
+        position: absolute;
+        transform: translatey(-50%);
+        width: rem-calc(34);
+        opacity: 0;
+        visibility: visible;
+
+        .mouse {
+
+            border: 2px solid $white;
+            border-radius: rem-calc(25);
+            box-sizing: content-box;
+            height: rem-calc(35);
+            opacity: 0.75;
+            padding: rem-calc(10 15);
+            width: rem-calc(3);
+
+            .scroller {
+
+                @include animation('2200ms infinite 2200ms scroll');
+
+                animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+                background-color: $white;
+                border-radius: 25%;
+                height: rem-calc(10);
+                width: rem-calc(3);
+
+            }
+
+        }
+
+    }
+
+}

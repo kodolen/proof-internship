@@ -1,0 +1,56 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+    {% include 'elements/top-content.html.twig' %}
+
+    <div class="container">
+        <div class="project-overview">
+            <div class="row">
+
+                {% for p in page.find('/projecten').children if p != page %}
+
+                    <div
+                        class="column {% if loop.index is divisibleby(2) %} small-12 medium-5 large-4 {% else %} small-12 medium-5 medium-offset-1 large-4 large-offset-2 {% endif %}">
+
+                        <div class="content-holder">
+                            <div class="image-holder">
+
+                                <img src="{{ (p.header.image|first).path }}" alt=""/>
+
+                                <span class="overlay">
+                                    <span class="button-wrapper">
+                                        {#TODO Add translation#}
+                                        <a class="button primary" href="{{ p.url }}">Bekijk project</a>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="bottom-content">
+
+                                <h2 class="title">{{ p.header.title }}</h2>
+
+                                {% for q in p.header.qualifications %}
+
+                                    <span class="caption">{{ q.qualification }}</span>
+
+                                {% endfor %}
+
+                                {#<p>{{ p.header.intro }}</p>#}
+
+                                {#TODO Add translation#}
+                                {#<a href="{{ p.url }}" class="secondary button">Bekijk project</a>#}
+
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+
+        {% include 'layout/footer.html.twig' %}
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+    {% include 'elements/top-content.html.twig' %}
+
+    <div class="container">
+        <div class="intro">
+
+            {% if page.header.content_intro %}
+
+                <div class="row">
+                    <div class="column small-12 large-5 large-offset-6">
+                        <div class="intro-content">
+
+                            <h2> Intro hoofdtitel hier</h2>
+                            <span class="caption">intro caption hier</span>
+
+                            <p>{{ page.header.content_intro }}</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-image">
+
+                    <img src="../{{ (page.header.image|first).path }}" alt=""/>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+        {% if page.header.content_block %}
+
+            <div class="content-container">
+
+                {% for content in page.header.content_block %}
+
+                    <div class="content-wrapper">
+                        <div class="row">
+
+                            <div class="column small-12 medium-4 medium-offset-1{% if loop.index is divisibleby(2) %} even{% endif %}">
+
+                                <h2> {{ content.title }} </h2>
+
+                                <p> {{ content.text }} </p>
+
+                            </div>
+                            <div class="column small-12 medium-5 medium-offset-1">
+                                <div class="image-content-holder" data-tilt>
+
+                                    <img src="../{{ (content.image | first).path }}" alt=""/>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+                {% if page.header.content_reflection %}
+
+                    <div class="content-wrapper">
+                        <div class="row">
+                            <div class="column small-12 medium-8 medium-offset-2">
+
+                                {#TODO Add translation#}
+                                <h2>Reflectie</h2>
+                                <p>{{ page.header.content_reflection }}</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+            {% include 'layout/footer.html.twig' %}
+
+        {% endif %}
+
+    </div>
+
+{% endblock %}

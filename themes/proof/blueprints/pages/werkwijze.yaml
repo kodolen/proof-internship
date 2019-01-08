@@ -1,0 +1,69 @@
+title: Werkwijze
+'@extends':
+    type: default #choose template here, for example, if we are adding custom fields to default.html.twig – then we would put 'default' here under type. if we were adding custom fields to a template coolpage.html.twig, we would put 'page' here.
+    context: blueprints://pages
+
+form:
+    fields:
+        tabs:
+            type: tabs
+            active: 1
+
+            fields:
+                content:
+                    fields:
+                        header.intro_title:
+                            type: text
+                            label: intro Titel
+                        header.quote:
+                            type: markdown
+                            label: Quote
+                            showPreview: true
+                            validate:
+                                type: textarea
+                        header.custom_text_fields:
+                            name: fields
+                            type: list
+                            style: vertical
+                            label: fields
+                            fields:
+                                .title:
+                                    type: text
+                                    label: Title
+                                .caption:
+                                    type: text
+                                    label: Caption
+                                .preview:
+                                    type: text
+                                    max: 20
+                                    label: Preview
+                                .textarea:
+                                    type: textarea
+                                    label: textarea
+                                .image:
+                                    type: file
+                                    label: Upload image
+                                    destination: 'user/themes/proof/assets'
+                                .link:
+                                    type: text
+                                    label: Link to website
+                        header.summary_title:
+                            type: text
+                            label: Summary title
+                        header.summary_preview:
+                            type: text
+                            label: Summary preview
+                        header.summary:
+                            type: text
+                            label: Summary
+                        header.programming_logos:
+                            name: fields
+                            type: list
+                            style: vertical
+                            label: fields
+                            fields:
+                                .logo:
+                                    type: file
+                                    label: Upload logo
+                                    destination: 'user/themes/proof/assets'
+

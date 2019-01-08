@@ -1,0 +1,129 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+    {% include 'elements/top-content.html.twig' %}
+
+    <div class="container">
+
+        {% include 'elements/quote-block.html.twig' %}
+
+        <div class="workflow">
+
+            {% if page.header.custom_text_fields %}
+
+            <div class="row">
+                <div class="column small-12 medium-10 medium-offset-1 large-8 large-offset-2">
+                    <div class="row">
+
+                        {% for text in page.header.custom_text_fields %}
+
+                            <div class="column small-12 medium-6">
+                                <div class="block-wrapper">
+                                    <div class="content-block-text" data-accordion-holder>
+                                        <div class="title-wrapper">
+
+                                            {% if text.image %}
+
+                                                <div class="block-img-wrapper">
+
+                                                    <img src="{{ (text.image|first).path }}" alt=""/>
+
+                                                </div>
+
+                                            {% endif %}
+
+                                            {% if text.title and text.caption %}
+
+                                                <h2>{{ text.title }}</h2>
+
+                                                <span class="caption">{{ text.caption }}</span>
+
+                                            {% endif %}
+
+                                        </div>
+
+                                        {% if text.preview %}
+
+
+                                            {#<p>{{ text.preview }}</p>#}
+
+                                            <p class="accordion-text hidden holder">
+
+                                                {{ text.textarea }}
+
+                                                <span class="overlay"></span>
+
+                                            </p>
+
+                                            <span class="link" data-accordion-button>Lees meer</span>
+
+
+                                        {% endif %}
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+
+        {% if page.header.summary and page.header.summary_title and page.header.summary_preview %}
+
+            <div class="summary-wrapper">
+                <div class="row">
+                    <div class="column medium-8 medium-offset-2">
+
+                        <h2>{{ page.header.summary_title }}</h2>
+
+                        <p> {{ page.header.summary_preview }} </p>
+
+                        <p class="accordion-text hidden holder">
+
+                            {{ page.header.summary }}
+
+                            <span class="overlay"></span>
+
+                        </p>
+
+                        <span class="link" data-accordion-button>Lees meer</span>
+
+                    </div>
+                </div>
+            </div>
+
+        {% endif %}
+
+        <div class="bottom-content">
+            <div class="row">
+                <div class="column medium-8 medium-offset-2">
+
+                    {#TODO Add translations or via admin panel#}
+                    <span class="caption">Gebruikte Programmeertalen:</span>
+
+                    <div class="logo-wrapper">
+
+                        {% for logo in page.header.programming_logos %}
+
+                            <img src="{{ (logo.logo|first).path }}"/>
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include 'layout/footer.html.twig' %}
+
+    </div>
+
+{% endblock %}
+
