@@ -22,22 +22,19 @@
 
             .title {
 
+                @include animation('800ms forwards 2000ms leftToRight');
+
                 color: $white;
                 font-size: rem-calc(40);
                 line-height: rem-calc(32);
+                opacity: 0;
+                width: rem-calc(250);
 
                 @include breakpoint(medium) {
 
                     font-size: rem-calc(100);
                     line-height: rem-calc(90);
-
-                }
-
-                @include breakpoint(large) {
-
-                    @include animation('800ms forwards 2000ms leftToRight');
-
-                    opacity: 0;
+                    width: rem-calc(400);
 
                 }
 
@@ -45,27 +42,18 @@
 
             p {
 
+                @include animation('800ms forwards 2800ms fadeIn');
+
                 margin-bottom: rem-calc(32);
-
-                @include breakpoint(large) {
-
-                    @include animation('800ms forwards 2800ms fadeIn');
-
-                    opacity: 0;
-
-                }
+                opacity: 0;
 
             }
 
             .button {
 
-                @include breakpoint(large) {
+                @include animation('800ms forwards 3600ms fadeIn');
 
-                    @include animation('800ms forwards 3600ms fadeIn');
-
-                    opacity: 0;
-
-                }
+                opacity: 0;
 
             }
 

@@ -21,6 +21,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="intro-image">
 
                     <img src="../{{ (page.header.image|first).path }}" alt=""/>
@@ -40,15 +41,15 @@
                     <div class="content-wrapper">
                         <div class="row">
 
-                            <div class="column medium-4 medium-offset-1{% if loop.index is divisibleby(2) %} even{% endif %}">
+                            <div class="column small-12 medium-4 medium-offset-1{% if loop.index is divisibleby(2) %} even{% endif %}">
 
                                 <h2> {{ content.title }} </h2>
 
                                 <p> {{ content.text }} </p>
 
                             </div>
-                            <div class="column medium-5 medium-offset-1">
-                                <div class="image-content-holder">
+                            <div class="column small-12 medium-5 medium-offset-1">
+                                <div class="image-content-holder" data-tilt>
 
                                     <img src="../{{ (content.image | first).path }}" alt=""/>
 

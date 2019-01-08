@@ -10,7 +10,7 @@
     top: rem-calc(-100);
     transition: all 0.5s ease-out;
     visibility: hidden;
-    width: 50%;
+    width: 100%;
     z-index: 20;
 
     @include breakpoint(large) {
@@ -19,7 +19,6 @@
         opacity: 1;
         top: 0;
         visibility: visible;
-        width: 100%;
 
     }
 
@@ -70,13 +69,25 @@
         letter-spacing: -1em;
         margin: rem-calc(0 100 0 0);
         padding: 0;
-        text-align: right;
+        text-align: center;
+
+        @include breakpoint(large) {
+
+            text-align: right;
+
+        }
 
         li {
 
-            display: inline-block;
+            display: block;
             letter-spacing: normal;
             position: relative;
+
+            @include breakpoint(large) {
+
+                display: inline-block;
+
+            }
 
             a {
 

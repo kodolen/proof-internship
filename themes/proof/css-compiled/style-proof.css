@@ -5509,7 +5509,7 @@ button.swiper-pagination-bullet {
   top: -6.25rem;
   transition: all 0.5s ease-out;
   visibility: hidden;
-  width: 50%;
+  width: 100%;
   z-index: 20;
 }
 @media print, screen and (min-width: 64em) {
@@ -5518,7 +5518,6 @@ button.swiper-pagination-bullet {
     opacity: 1;
     top: 0;
     visibility: visible;
-    width: 100%;
   }
 }
 .header .padding {
@@ -5540,12 +5539,22 @@ button.swiper-pagination-bullet {
   letter-spacing: -1em;
   margin: 0 6.25rem 0 0;
   padding: 0;
-  text-align: right;
+  text-align: center;
+}
+@media print, screen and (min-width: 64em) {
+  .main-nav ul {
+    text-align: right;
+  }
 }
 .main-nav ul li {
-  display: inline-block;
+  display: block;
   letter-spacing: normal;
   position: relative;
+}
+@media print, screen and (min-width: 64em) {
+  .main-nav ul li {
+    display: inline-block;
+  }
 }
 .main-nav ul li a {
   color: #fff;
@@ -5656,15 +5665,20 @@ button.swiper-pagination-bullet {
   z-index: 2;
 }
 .home-visual .home-visual-background .landing-holder .landings-text .title {
-  margin-top: -0.5rem;
+  animation: 800ms forwards 4000ms leftToRight;
+  margin-top: -0.25rem;
+  opacity: 0;
+  width: 12.5rem;
 }
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width: 48em) {
   .home-visual .home-visual-background .landing-holder .landings-text .title {
-    animation: 800ms forwards 4000ms leftToRight;
-    opacity: 0;
+    margin-top: -0.5rem;
+    width: 25rem;
   }
 }
 .home-visual .home-visual-background .landing-holder .landings-text p {
+  animation: 800ms forwards 4800ms fadeIn;
+  opacity: 0;
   padding-bottom: 0.5rem;
   width: 80%;
 }
@@ -5673,29 +5687,19 @@ button.swiper-pagination-bullet {
     padding-bottom: 1rem;
   }
 }
-@media print, screen and (min-width: 64em) {
-  .home-visual .home-visual-background .landing-holder .landings-text p {
-    animation: 800ms forwards 4800ms fadeIn;
-    opacity: 0;
-  }
-}
 .home-visual .home-visual-background .landing-holder .landings-text .subtitle {
+  animation: 800ms forwards 3200ms leftToRight;
   margin-bottom: 6.25rem;
+  opacity: 0;
 }
-@media print, screen and (min-width: 64em) {
-  .home-visual .home-visual-background .landing-holder .landings-text .subtitle {
-    animation: 800ms forwards 3200ms leftToRight;
-    opacity: 0;
-  }
-}
-@media print, screen and (min-width: 64em) {
-  .home-visual .home-visual-background .landing-holder .landings-text .button {
-    animation: 800ms forwards 5600ms fadeIn;
-    opacity: 0;
-  }
+.home-visual .home-visual-background .landing-holder .landings-text .button {
+  animation: 800ms forwards 5600ms fadeIn;
+  opacity: 0;
 }
 .home-visual .home-visual-background .landing-holder .landing-image {
+  animation: 800ms forwards 2400ms leftToRight;
   align-self: flex-end;
+  opacity: 0;
   position: absolute;
   right: -6.25rem;
   width: 100%;
@@ -5708,8 +5712,6 @@ button.swiper-pagination-bullet {
 }
 @media print, screen and (min-width: 64em) {
   .home-visual .home-visual-background .landing-holder .landing-image {
-    animation: 800ms forwards 2400ms leftToRight;
-    opacity: 0;
     position: relative;
     right: -12.5rem;
     width: 100%;
@@ -5762,12 +5764,12 @@ button.swiper-pagination-bullet {
 }
 @media print, screen and (min-width: 48em) {
   .workflow {
-    padding: 6.25rem 0;
+    padding: 5rem 0;
   }
 }
 @media print, screen and (min-width: 64em) {
   .workflow {
-    padding: 12.5rem 0;
+    padding: 6.25rem 0;
   }
 }
 .workflow .block-wrapper .content-block-text {
@@ -5857,36 +5859,28 @@ button.swiper-pagination-bullet {
   width: auto;
 }
 .top-content .content-wrapper .content-wrapper-background .title {
+  animation: 800ms forwards 2000ms leftToRight;
   color: #FFFFFF;
   font-size: 2.5rem;
   line-height: 2rem;
+  opacity: 0;
+  width: 15.625rem;
 }
 @media print, screen and (min-width: 48em) {
   .top-content .content-wrapper .content-wrapper-background .title {
     font-size: 6.25rem;
     line-height: 5.625rem;
-  }
-}
-@media print, screen and (min-width: 64em) {
-  .top-content .content-wrapper .content-wrapper-background .title {
-    animation: 800ms forwards 2000ms leftToRight;
-    opacity: 0;
+    width: 25rem;
   }
 }
 .top-content .content-wrapper .content-wrapper-background p {
+  animation: 800ms forwards 2800ms fadeIn;
   margin-bottom: 2rem;
+  opacity: 0;
 }
-@media print, screen and (min-width: 64em) {
-  .top-content .content-wrapper .content-wrapper-background p {
-    animation: 800ms forwards 2800ms fadeIn;
-    opacity: 0;
-  }
-}
-@media print, screen and (min-width: 64em) {
-  .top-content .content-wrapper .content-wrapper-background .button {
-    animation: 800ms forwards 3600ms fadeIn;
-    opacity: 0;
-  }
+.top-content .content-wrapper .content-wrapper-background .button {
+  animation: 800ms forwards 3600ms fadeIn;
+  opacity: 0;
 }
 
 .summary-wrapper {
@@ -5914,7 +5908,12 @@ button.swiper-pagination-bullet {
 }
 
 .project-overview {
-  padding: 6.25rem 0;
+  padding: 0;
+}
+@media print, screen and (min-width: 48em) {
+  .project-overview {
+    padding: 6.25rem 0;
+  }
 }
 .project-overview .content-holder {
   height: 31.25rem;
@@ -5935,8 +5934,10 @@ button.swiper-pagination-bullet {
   opacity: 0;
   width: 50%;
 }
-.project-overview .content-holder .image-holder:hover .overlay {
-  opacity: 1;
+@media print, screen and (min-width: 64em) {
+  .project-overview .content-holder .image-holder:hover .overlay {
+    opacity: 1;
+  }
 }
 .project-overview .content-holder .overlay {
   align-items: center;
@@ -6000,21 +6001,27 @@ button.swiper-pagination-bullet {
   opacity: 0;
 }
 .intro .intro-image {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  width: 50%;
-  position: absolute;
-  right: 55%;
-  top: 0;
-  bottom: 0;
-  background-color: whitesmoke;
-  opacity: 0;
+  visibility: hidden;
+}
+@media print, screen and (min-width: 48em) {
+  .intro .intro-image {
+    align-items: center;
+    background-color: whitesmoke;
+    bottom: 0;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    right: 55%;
+    top: 0;
+    visibility: visible;
+    width: 50%;
+  }
 }
 .intro .intro-image img {
-  width: 50%;
   opacity: 0;
+  width: 50%;
 }
 .intro.animate .intro-image {
   animation: 800ms forwards leftToRightProject;
@@ -6046,11 +6053,21 @@ button.swiper-pagination-bullet {
   opacity: 0;
 }
 .content-container .content-wrapper .image-content-holder {
-  align-items: center;
   display: flex;
-  height: 100%;
   justify-content: center;
-  opacity: 0;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.content-container .content-wrapper .image-content-holder img {
+  width: 75%;
+}
+@media print, screen and (min-width: 48em) {
+  .content-container .content-wrapper .image-content-holder {
+    height: 100%;
+    opacity: 0;
+    margin-top: 0;
+  }
 }
 .content-container .content-wrapper:nth-child(odd) {
   background: rgba(247, 247, 247, 0.5);
@@ -6072,8 +6089,10 @@ button.swiper-pagination-bullet {
   animation: 800ms forwards rightToLeft;
 }
 
-.even {
-  order: 2;
+@media print, screen and (min-width: 48em) {
+  .even {
+    order: 2;
+  }
 }
 
 .holder {
@@ -6108,31 +6127,37 @@ button.swiper-pagination-bullet {
 }
 
 .mouse-sroller {
-  animation: 800ms forwards 4800ms fadeIn;
-  bottom: 1.25rem;
-  height: 3.4375rem;
-  left: 50%;
-  position: absolute;
-  transform: translatey(-50%);
-  width: 2.125rem;
-  opacity: 0;
+  visibility: hidden;
 }
-.mouse-sroller .mouse {
-  border: 2px solid #FFFFFF;
-  border-radius: 1.5625rem;
-  box-sizing: content-box;
-  height: 2.1875rem;
-  opacity: 0.75;
-  padding: 0.625rem 0.9375rem;
-  width: 0.1875rem;
-}
-.mouse-sroller .mouse .scroller {
-  animation: 2200ms infinite 2200ms scroll;
-  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
-  background-color: #FFFFFF;
-  border-radius: 25%;
-  height: 0.625rem;
-  width: 0.1875rem;
+@media print, screen and (min-width: 64em) {
+  .mouse-sroller {
+    animation: 800ms forwards 4800ms fadeIn;
+    bottom: 1.25rem;
+    height: 3.4375rem;
+    left: 50%;
+    position: absolute;
+    transform: translatey(-50%);
+    width: 2.125rem;
+    opacity: 0;
+    visibility: visible;
+  }
+  .mouse-sroller .mouse {
+    border: 2px solid #FFFFFF;
+    border-radius: 1.5625rem;
+    box-sizing: content-box;
+    height: 2.1875rem;
+    opacity: 0.75;
+    padding: 0.625rem 0.9375rem;
+    width: 0.1875rem;
+  }
+  .mouse-sroller .mouse .scroller {
+    animation: 2200ms infinite 2200ms scroll;
+    animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+    background-color: #FFFFFF;
+    border-radius: 25%;
+    height: 0.625rem;
+    width: 0.1875rem;
+  }
 }
 
 .menu-toggle {

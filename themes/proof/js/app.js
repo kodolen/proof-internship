@@ -10,32 +10,6 @@ let accordionOpen = false;
 
 $(document).ready(function () {
 
-    //initialize swiper when document ready
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        speed: 1000,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        mousewheel: false,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            progressbarOpposite: false,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
-    // $(function () {
-    //     $('html, body').animate({
-    //         scrollTop: $('.intro-content').offset().top
-    //     }, 1000);
-    // });
-
     //Accordions
     $accordionButton.click(function (e) {
         e.preventDefault();
@@ -168,6 +142,11 @@ $(document).ready(function () {
 
         }, {offset: '50%'}
     );
+
+    $('.image-content-holder').tilt({
+        glare: false,
+        perspective: 600
+    })
 
 });
 
