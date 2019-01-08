@@ -1,2 +1,0 @@
-# proof-internship
-Internship website
